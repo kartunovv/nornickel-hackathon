@@ -1,0 +1,12 @@
+.env
+.venv/
+.claude/
+__pycache__/
+*.pyc
+artifacts/cache/
+artifacts/uploads/
+artifacts/feedback.json
+data/
+*.zip
+*Zone.Identifier
+_*.py

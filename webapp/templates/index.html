@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Фабрика гипотез — Норникель</title>
+<style>
+:root{
+  --bg:#0d1117; --panel:#161b22; --panel2:#1c2330; --border:#2d3646;
+  --text:#e6edf3; --muted:#8b98a9; --accent:#4da3ff; --accent2:#57d9a3;
+  --warn:#ffb454; --danger:#ff6b6b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font:15px/1.55 "Segoe UI",system-ui,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:24px 20px 80px}
+header{display:flex;align-items:baseline;gap:14px;margin-bottom:6px}
+h1{font-size:26px}
+.sub{color:var(--muted);margin-bottom:24px}
+.badge{background:var(--panel2);border:1px solid var(--border);border-radius:20px;
+  padding:2px 12px;font-size:12px;color:var(--accent2)}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+  padding:20px;margin-bottom:16px}
+label{display:block;font-size:13px;color:var(--muted);margin:10px 0 4px}
+input[type=text],select,textarea{width:100%;background:var(--panel2);color:var(--text);
+  border:1px solid var(--border);border-radius:8px;padding:9px 12px;font:inherit}
+.row{display:flex;gap:16px;flex-wrap:wrap}
+.row>div{flex:1;min-width:260px}
+button{background:var(--accent);color:#08121f;border:0;border-radius:8px;
+  padding:10px 22px;font:600 15px/1 inherit;cursor:pointer}
+button:hover{filter:brightness(1.12)}
+button.ghost{background:var(--panel2);color:var(--text);border:1px solid var(--border)}
+button:disabled{opacity:.5;cursor:default}
+.weights{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.weights .w{background:var(--panel2);border:1px solid var(--border);border-radius:8px;padding:10px}
+.weights .w span{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+input[type=range]{width:100%}
+#progress{display:none}
+.bar{height:8px;background:var(--panel2);border-radius:6px;overflow:hidden;margin-top:8px}
+.bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));
+  width:0;transition:width .4s}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.kpi{background:var(--panel2);border:1px solid var(--border);border-radius:10px;padding:14px}
+.kpi b{font-size:22px;display:block}
+.kpi span{font-size:12px;color:var(--muted)}
+.signal{border-left:3px solid var(--warn);padding:10px 14px;background:var(--panel2);
+  border-radius:0 8px 8px 0;margin-bottom:10px}
+.signal b{font-size:14px}
+.signal p{font-size:13px;color:var(--muted);margin-top:4px}
+.hypo{border:1px solid var(--border);border-radius:12px;padding:18px;margin-bottom:14px;
+  background:linear-gradient(180deg,var(--panel2),var(--panel))}
+.hypo h3{font-size:16px;margin-bottom:6px}
+.hypo .meta{font-size:12px;color:var(--muted);margin-bottom:10px}
+.scorebar{display:flex;height:14px;border-radius:7px;overflow:hidden;margin:8px 0 4px;
+  border:1px solid var(--border)}
+.scorebar i{display:block;height:100%}
+.crit{display:inline-block;font-size:11px;color:var(--muted);margin-right:12px}
+.crit b{color:var(--text)}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:4px}
+details{margin-top:10px}
+summary{cursor:pointer;color:var(--accent);font-size:13px}
+.section{font-size:13px;margin:8px 0}
+.section b{color:var(--accent2)}
+.section ul,.section ol{margin:4px 0 4px 20px}
+.cite{background:var(--panel);border:1px solid var(--border);border-radius:8px;
+  padding:8px 10px;font-size:12px;color:var(--muted);margin-top:6px}
+.cite b{color:var(--warn)}
+.fbtns{margin-top:10px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.fbtns button{padding:6px 14px;font-size:13px}
+.fbtns button.sel-acc{background:var(--accent2);color:#08121f;border-color:var(--accent2)}
+.fbtns button.sel-rej{background:var(--danger);color:#08121f;border-color:var(--danger)}
+.tag{display:inline-block;background:var(--panel);border:1px solid var(--border);
+  border-radius:12px;padding:1px 10px;font-size:11px;color:var(--muted);margin-right:6px}
+.tabs{display:flex;gap:8px;margin-bottom:16px}
+.tabs button{background:var(--panel2);color:var(--muted);border:1px solid var(--border)}
+.tabs button.active{background:var(--accent);color:#08121f}
+#graphCanvas{width:100%;height:640px;background:var(--panel2);border-radius:10px;
+  border:1px solid var(--border);cursor:grab}
+.legend{font-size:12px;color:var(--muted);margin-top:8px}
+.exports{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px}
+.err{color:var(--danger);margin-top:10px}
+.score-pill{float:right;background:var(--accent);color:#08121f;border-radius:16px;
+  padding:2px 12px;font-weight:700;font-size:14px}
+.small{font-size:12px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><h1>Фабрика гипотез</h1><span class="badge">GraphRAG · YandexGPT · граф знаний</span></header>
+  <div class="sub">Генерация и прозрачное ранжирование проверяемых гипотез по снижению потерь металлов с хвостами обогащения</div>
+
+  <div class="tabs">
+    <button id="tabRun" class="active" onclick="showTab('run')">Генерация гипотез</button>
+    <button id="tabGraph" onclick="showTab('graph')">Граф знаний</button>
+  </div>
+
+  <div id="paneRun">
+    <div class="card">
+      <details style="margin-bottom:12px"><summary>Что подаётся на вход? Справка о данных</summary>
+        <div class="small" style="margin-top:8px;line-height:1.6">
+        <b>Отчёт института по хвостам</b> — Excel-файл с результатами комплексного
+        анализа хвостов обогатительной фабрики. Хвосты — отвальные продукты флотации:
+        металл, попавший в них, считается потерянным. В отчёте указано, сколько руды
+        переработано и сколько никеля (в данных — «Элемент 28») и меди («Элемент 29»)
+        ушло в хвосты; потери разложены по классам крупности частиц (от +125 до −10 мкм)
+        и по минеральным формам (раскрытые/закрытые сростки пентландита и халькопирита,
+        примесь в пирротине, силикаты, миллерит). Система читает этот файл, находит,
+        где именно и почему теряется металл, и предлагает проверяемые способы
+        сократить потери.</div>
+      </details>
+      <div class="row">
+        <div>
+          <label>Отчёт института по хвостам (пример из кейса)</label>
+          <select id="example"></select>
+          <label>… или загрузите свой .xlsx</label>
+          <input type="file" id="file" accept=".xlsx">
+        </div>
+        <div>
+          <label>Целевой KPI / проблема (можно оставить пустым — определится по отчёту)</label>
+          <input type="text" id="goal" placeholder="напр.: снизить потери Ni с породными хвостами на 10%">
+          <label>Ограничения (сырьё, бюджет, оборудование)</label>
+          <input type="text" id="constraints" placeholder="напр.: без строительства новых переделов, бюджет до 100 млн руб">
+        </div>
+      </div>
+      <label>Веса критериев ранжирования (экспертная настройка)</label>
+      <div class="small" style="margin-bottom:8px;line-height:1.5">
+        Итоговый балл гипотезы = взвешенная сумма пяти оценок (каждая 0–1).
+        Веса задают, что для вашей команды важнее; стартовые значения —
+        нейтральная настройка с упором на ценность. Сумма автоматически
+        нормируется к 1, наведите курсор на название критерия — увидите,
+        что он измеряет.</div>
+      <div class="weights" id="weights"></div>
+      <div style="margin-top:16px;display:flex;gap:10px;align-items:center">
+        <button id="runBtn" onclick="run()">Сгенерировать гипотезы</button>
+        <span class="small">генерация занимает 1–3 минуты (квота API общая на хакатон)</span>
+      </div>
+      <div id="progress"><div class="bar"><i id="barFill"></i></div>
+        <div class="small" id="stageText" style="margin-top:6px"></div></div>
+      <div class="err" id="err"></div>
+    </div>
+    <div id="results"></div>
+  </div>
+
+  <div id="paneGraph" style="display:none">
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+        <b>Граф знаний предметной области</b>
+        <span class="small" id="graphStats"></span>
+      </div>
+      <canvas id="graphCanvas"></canvas>
+      <div class="legend">
+        <span class="dot" style="background:#ff6b6b"></span>минерал&nbsp;
+        <span class="dot" style="background:#4da3ff"></span>операция&nbsp;
+        <span class="dot" style="background:#57d9a3"></span>оборудование&nbsp;
+        <span class="dot" style="background:#ffb454"></span>параметр&nbsp;
+        <span class="dot" style="background:#c792ea"></span>механизм&nbsp;
+        <span class="dot" style="background:#f7768e"></span>KPI&nbsp;
+        <span class="dot" style="background:#7dcfff"></span>реагент
+        &nbsp;·&nbsp; наведите на узел — описание и связи; перетаскивание, колесо — масштаб.
+        При отдалении подписи показываются только у крупных узлов — приблизьте, чтобы увидеть все.
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const CRIT = {
+  value:{name:"Ценность",color:"#57d9a3",
+    hint:"Сколько металла (в деньгах) вернёт гипотеза, если подтвердится: середина вилки ожидаемого эффекта, умноженная на цену металла. Нормируется на лучшую гипотезу выборки."},
+  feasibility:{name:"Реализуемость",color:"#4da3ff",
+    hint:"Насколько дёшево и быстро внедрить: настройка существующего оборудования (1.0) / замена узла (0.6) / новый передел (0.25)."},
+  novelty:{name:"Новизна",color:"#c792ea",
+    hint:"Насколько гипотеза отличается от решений, которые фабрики уже предлагали на мозговых штурмах (сравнение смыслов через эмбеддинги)."},
+  evidence:{name:"Обоснованность",color:"#ffb454",
+    hint:"Сколько подтверждений: цитаты из литературы, опора на узлы графа знаний, явный механизм влияния."},
+  testability:{name:"Проверяемость",color:"#7dcfff",
+    hint:"Есть ли конкретный план лабораторной проверки и критерий успеха/провала."},
+  feedback:{name:"Фидбэк",color:"#f7768e",
+    hint:"Поправка по прошлым оценкам экспертов на похожих гипотезах (принято/отклонено)."},
+};
+const DEFW = {value:0.30,feasibility:0.20,novelty:0.15,evidence:0.20,testability:0.15};
+let currentJob = null;
+
+// ---------- init
+(async function(){
+  const ex = await fetch('/api/examples').then(r=>r.json());
+  const sel = document.getElementById('example');
+  sel.innerHTML = '<option value="">— не выбран —</option>' +
+    ex.map(e=>`<option value="${e.path}">${e.name}</option>`).join('');
+  if(ex.length) sel.value = ex[0].path;
+  const wdiv = document.getElementById('weights');
+  wdiv.innerHTML = Object.entries(DEFW).map(([k,v])=>`
+    <div class="w" title="${CRIT[k].hint}"><span><b style="color:${CRIT[k].color}">${CRIT[k].name}</b>
+    <em id="wv_${k}">${v.toFixed(2)}</em></span>
+    <input type="range" min="0" max="100" value="${v*100}" id="w_${k}"
+      oninput="document.getElementById('wv_${k}').textContent=(this.value/100).toFixed(2)">
+    </div>`).join('');
+})();
+
+function weights(){
+  const o={}; for(const k of Object.keys(DEFW))
+    o[k]=Number(document.getElementById('w_'+k).value)/100;
+  return o;
+}
+
+// ---------- run
+async function run(){
+  const fd = new FormData();
+  const f = document.getElementById('file').files[0];
+  if(f) fd.append('file', f);
+  fd.append('example_path', document.getElementById('example').value);
+  fd.append('goal', document.getElementById('goal').value);
+  fd.append('constraints', document.getElementById('constraints').value || 'нет');
+  fd.append('weights', JSON.stringify(weights()));
+  document.getElementById('err').textContent='';
+  document.getElementById('runBtn').disabled=true;
+  document.getElementById('progress').style.display='block';
+  const r = await fetch('/api/run',{method:'POST',body:fd}).then(r=>r.json());
+  if(r.error){ fail(r.error); return; }
+  currentJob = r.job_id;
+  poll();
+}
+function fail(msg){
+  document.getElementById('err').textContent = 'Ошибка: '+msg;
+  document.getElementById('runBtn').disabled=false;
+  document.getElementById('progress').style.display='none';
+}
+async function poll(){
+  const st = await fetch('/api/status/'+currentJob).then(r=>r.json());
+  if(st.status==='error'){ fail(st.error); return; }
+  const stages = {'Парсинг отчёта по хвостам':10,'Диагностика потерь':20,
+                  'Генерация гипотез':30,'Ранжирование':90};
+  let pct = stages[st.stage]||5;
+  if(st.stage==='Генерация гипотез' && st.total)
+    pct = 30 + 60*(st.done/st.total);
+  document.getElementById('barFill').style.width=pct+'%';
+  document.getElementById('stageText').textContent =
+    st.stage + (st.total?` (${st.done}/${st.total})`:'');
+  if(st.status==='done'){
+    document.getElementById('barFill').style.width='100%';
+    document.getElementById('runBtn').disabled=false;
+    render(st.result);
+    setTimeout(()=>document.getElementById('progress').style.display='none',600);
+  } else setTimeout(poll, 1500);
+}
+
+// ---------- render
+function fmt(x){ return (x==null)?'—':Math.round(x).toLocaleString('ru-RU'); }
+function render(res){
+  window.HYPOS = res.hypotheses;
+  const rep = res.report;
+  let html = `<div class="card"><b>Диагностическая сводка — ${rep.plant}</b>
+  <div class="small" style="margin:4px 0 12px">${res.goal}</div>
+  <div class="kpis">
+    <div class="kpi"><b>${fmt(rep.tailings_smt)}</b><span>СМТ отвальных хвостов</span></div>
+    <div class="kpi"><b>${fmt(rep.tailings_ni_t)} т</b><span>потери Ni за период</span></div>
+    <div class="kpi"><b>${fmt(rep.tailings_cu_t)} т</b><span>потери Cu за период</span></div>
+    <div class="kpi"><b>${res.hypotheses.length}</b><span>гипотез сгенерировано</span></div>
+    <div class="kpi"><b>${Math.round(res.elapsed_sec)} c</b><span>время генерации</span></div>
+  </div>
+  <details style="margin-top:12px"><summary>Сигналы диагностики (${res.signals.length}) — почему система видит проблему</summary>
+  <div style="margin-top:10px">` +
+  res.signals.map(s=>`<div class="signal"><b>${s.title}</b>
+    <span class="tag">${fmt(s.tonnes)} т ${s.metal}</span>
+    <span class="tag">${s.share_of_stream_pct.toFixed(0)}% потерь потока</span>
+    <p>${s.explanation}</p></div>`).join('') +
+  `</div></details>
+  <div class="exports" style="margin-top:14px">
+    <button class="ghost" onclick="dl('docx')">Отчёт DOCX</button>
+    <button class="ghost" onclick="dl('html')">Отчёт HTML</button>
+    <button class="ghost" onclick="dl('csv')">CSV</button>
+    <button class="ghost" onclick="dl('tasks')">Задачи JSON (Jira/YouTrack)</button>
+    <button class="ghost" onclick="dl('json')">Полный JSON</button>
+    <button class="ghost" onclick="rerank()">Пересчитать с текущими весами</button>
+  </div></div>`;
+
+  html += res.hypotheses.map(h=>{
+    const segs = Object.entries(h.scores).filter(([k])=>k!=='feedback')
+      .map(([k,s])=>`<i style="width:${Math.max(1,s.score*(s.weight||0)*100/ (h.total_score||1)*0.98)}%;
+        background:${CRIT[k]?.color||'#888'}" title="${CRIT[k]?.name}: ${s.score}"></i>`).join('');
+    const crits = Object.entries(h.scores).map(([k,s])=>
+      `<span class="crit"><span class="dot" style="background:${CRIT[k]?.color||'#888'}"></span>
+       ${CRIT[k]?.name||k}: <b>${s.score.toFixed(2)}</b></span>`).join('');
+    const critExpl = Object.entries(h.scores).map(([k,s])=>
+      `<li><b style="color:${CRIT[k]?.color}">${CRIT[k]?.name||k}</b> — ${s.explanation}</li>`).join('');
+    return `<div class="hypo">
+      <span class="score-pill">${h.total_score.toFixed(2)}</span>
+      <h3>№${h.rank}. ${h.statement}</h3>
+      <div class="meta">
+        <span class="tag">хвосты ${h.stream}</span><span class="tag">${h.metal}</span>
+        <span class="tag">сигнал: ${h.signal_title}</span>
+        <span class="tag">${['настройка','модернизация','новый передел'][h.capex_class]||''}</span>
+      </div>
+      <div class="scorebar">${segs}</div>
+      <div>${crits}</div>
+      <div class="section"><b>Механизм:</b> ${h.mechanism}</div>
+      <div class="section"><b>Обоснование:</b> ${h.rationale}</div>
+      <div class="section"><b>Ожидаемый эффект:</b> возврат ${fmt(h.expected_effect.tonnes_min)}–${fmt(h.expected_effect.tonnes_max)} т ${h.metal}/период
+        (${h.expected_effect.min_recovery_pct}–${h.expected_effect.max_recovery_pct}% ${h.expected_effect.basis})</div>
+      <details><summary>Карточка доказательств: разбор оценки, риски, дорожная карта, источники</summary>
+        <div class="section"><b>Почему такой балл:</b><ul>${critExpl}</ul></div>
+        <div class="section"><b>Риски:</b><ul>${h.risks.map(r=>`<li>${r}</li>`).join('')}</ul></div>
+        <div class="section"><b>Дорожная карта проверки:</b><ol>${h.test_plan.map(t=>`<li>${t}</li>`).join('')}</ol></div>
+        <div class="section"><b>Ресурсы:</b> ${h.required_resources||'—'}</div>
+        ${h.citations.map(c=>`<div class="cite"><b>[${c.n}]</b> ${c.source} — «${c.quote}…»</div>`).join('')||'<div class="small">прямых цитат нет — гипотеза опирается на граф знаний</div>'}
+        <div class="small" style="margin-top:6px">Узлы графа: ${[...new Set(h.graph_nodes)].join(', ')}
+          — <a href="#" style="color:var(--accent)" onclick="showSubgraph('${[...new Set(h.graph_nodes)].join(',')}');return false">показать подграф</a></div>
+      </details>
+      <div class="fbtns" title="Оценка эксперта: сохраняется и смещает рейтинг похожих гипотез при пересчёте и в следующих запусках. Можно передумать — повторное нажатие другой кнопки заменяет вердикт.">
+        <button class="ghost" onclick="fb(this,${h.rank-1},'accepted')">Принять</button>
+        <button class="ghost" onclick="fb(this,${h.rank-1},'rejected')">Отклонить</button>
+      </div>
+    </div>`;
+  }).join('');
+  document.getElementById('results').innerHTML = html;
+}
+
+async function fb(btn, idx, verdict){
+  const statement = (window.HYPOS[idx]||{}).statement||'';
+  await fetch('/api/feedback',{method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({statement, verdict})});
+  // одна актуальная оценка на гипотезу: выбранная кнопка подсвечивается,
+  // нажатие другой заменяет вердикт (на сервере запись тоже заменяется)
+  const [acc, rej] = btn.parentElement.querySelectorAll('button');
+  acc.classList.toggle('sel-acc', verdict==='accepted');
+  rej.classList.toggle('sel-rej', verdict==='rejected');
+  acc.textContent = verdict==='accepted' ? 'Принято' : 'Принять';
+  rej.textContent = verdict==='rejected' ? 'Отклонено' : 'Отклонить';
+  let note = btn.parentElement.querySelector('.fbnote');
+  if(!note){
+    note = document.createElement('span');
+    note.className = 'small fbnote';
+    btn.parentElement.appendChild(note);
+  }
+  note.textContent = 'оценка сохранена — сместит рейтинг похожих гипотез при «Пересчитать» и в следующих запусках';
+}
+function dl(fmt){ window.open('/api/export/'+currentJob+'/'+fmt,'_blank'); }
+async function rerank(){
+  if(!currentJob) return;
+  const res = await fetch('/api/rerank/'+currentJob,{method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify(weights())}).then(r=>r.json());
+  if(!res.error) render(res);
+}
+
+// ---------- graph tab
+function showTab(t){
+  document.getElementById('paneRun').style.display = t==='run'?'block':'none';
+  document.getElementById('paneGraph').style.display = t==='graph'?'block':'none';
+  document.getElementById('tabRun').classList.toggle('active',t==='run');
+  document.getElementById('tabGraph').classList.toggle('active',t==='graph');
+  if(t==='graph' && !G.loaded) loadGraph('');
+}
+function showSubgraph(nodes){ showTab('graph'); loadGraph(nodes); }
+
+const TYPE_COLOR = {mineral:'#ff6b6b',operation:'#4da3ff',equipment:'#57d9a3',
+  parameter:'#ffb454',mechanism:'#c792ea',kpi:'#f7768e',reagent:'#7dcfff'};
+const G = {nodes:[],edges:[],loaded:false,scale:1,ox:0,oy:0,drag:null,pan:null};
+
+async function loadGraph(nodes){
+  const data = await fetch('/api/graph'+(nodes?'?nodes='+nodes:'')).then(r=>r.json());
+  document.getElementById('graphStats').textContent =
+    `узлов: ${data.stats.nodes}, связей: ${data.stats.edges} (показано ${data.nodes.length}/${data.edges.length})`;
+  const cv = document.getElementById('graphCanvas');
+  const W = cv.clientWidth, H = 640;
+  // степень узла — для размера и приоритета подписи
+  const deg = {};
+  data.edges.forEach(e=>{deg[e.src]=(deg[e.src]||0)+1; deg[e.dst]=(deg[e.dst]||0)+1;});
+  G.nodes = data.nodes.map((n,i)=>({...n, deg:deg[n.id]||0,
+    x: W/2 + (W/3)*Math.cos(2*Math.PI*i/data.nodes.length) + (i%7)*8,
+    y: H/2 + (H/3)*Math.sin(2*Math.PI*i/data.nodes.length) + (i%5)*8,
+    vx:0, vy:0}));
+  G.byId = Object.fromEntries(G.nodes.map(n=>[n.id,n]));
+  G.edges = data.edges.filter(e=>G.byId[e.src]&&G.byId[e.dst]);
+  G.loaded = true; G.scale=1; G.ox=0; G.oy=0; G.hover=null;
+  for(let i=0;i<400;i++) step(W,H);
+  draw();
+}
+function step(W,H){
+  const ns=G.nodes, k=130;   // сила расталкивания — узлы не слипаются
+  for(const a of ns){ a.fx=0; a.fy=0; }
+  for(let i=0;i<ns.length;i++) for(let j=i+1;j<ns.length;j++){
+    const a=ns[i],b=ns[j]; let dx=a.x-b.x,dy=a.y-b.y;
+    let d2=dx*dx+dy*dy||1, f=k*k/Math.sqrt(d2)/Math.sqrt(d2);
+    a.fx+=dx*f; a.fy+=dy*f; b.fx-=dx*f; b.fy-=dy*f;
+  }
+  for(const e of G.edges){
+    const a=G.byId[e.src],b=G.byId[e.dst];
+    let dx=b.x-a.x,dy=b.y-a.y,d=Math.sqrt(dx*dx+dy*dy)||1,f=(d-150)/d*0.02;
+    a.fx+=dx*f; a.fy+=dy*f; b.fx-=dx*f; b.fy-=dy*f;
+  }
+  for(const n of ns){
+    n.vx=(n.vx+n.fx)*0.45; n.vy=(n.vy+n.fy)*0.45;
+    n.x=Math.max(40,Math.min(W-40,n.x+n.vx));
+    n.y=Math.max(24,Math.min(H-24,n.y+n.vy));
+  }
+}
+function drawLabel(ctx,text,x,y){
+  // подпись с тёмной подложкой, чтобы не сливалась с рёбрами
+  ctx.font='11px sans-serif';
+  const w = ctx.measureText(text).width;
+  ctx.fillStyle='rgba(13,17,23,.82)';
+  ctx.fillRect(x-2, y-10, w+4, 13);
+  ctx.fillStyle='#e6edf3';
+  ctx.fillText(text, x, y);
+}
+function draw(){
+  const cv=document.getElementById('graphCanvas');
+  cv.width=cv.clientWidth; cv.height=640;
+  const ctx=cv.getContext('2d');
+  ctx.save(); ctx.translate(G.ox,G.oy); ctx.scale(G.scale,G.scale);
+  ctx.strokeStyle='rgba(90,105,130,.45)'; ctx.lineWidth=1;
+  for(const e of G.edges){
+    const a=G.byId[e.src],b=G.byId[e.dst];
+    ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke();
+  }
+  // узлы
+  for(const n of G.nodes){
+    const r = 5 + Math.min(6, n.deg);
+    ctx.beginPath(); ctx.arc(n.x,n.y,r,0,7);
+    ctx.fillStyle=TYPE_COLOR[n.type]||'#888'; ctx.fill();
+  }
+  // подписи: при отдалении — только у крупных узлов, при приближении — у всех
+  const minDeg = G.scale < 0.8 ? 3 : (G.scale < 1.2 ? 1 : 0);
+  for(const n of G.nodes){
+    if(n.deg >= minDeg || n === G.hover)
+      drawLabel(ctx, n.label.slice(0,34), n.x+10+Math.min(6,n.deg), n.y+4);
+  }
+  // тултип наведённого узла: тип + описание + связи
+  if(G.hover){
+    const n=G.hover;
+    const rels=G.edges.filter(e=>e.src===n.id||e.dst===n.id).slice(0,6)
+      .map(e=>{
+        const out=e.src===n.id;
+        const other=G.byId[out?e.dst:e.src];
+        return (out?'→ ':'← ')+e.rel+' '+(other?other.label.slice(0,30):'');
+      });
+    const lines=[n.label+'  ['+n.type+']', ...(n.desc?[n.desc.slice(0,90)]:[]), ...rels];
+    ctx.font='11px sans-serif';
+    const w=Math.max(...lines.map(t=>ctx.measureText(t).width))+16;
+    const x=n.x+16, y=n.y-8, h=lines.length*15+10;
+    ctx.fillStyle='rgba(22,27,34,.96)'; ctx.strokeStyle='#4da3ff';
+    ctx.beginPath(); ctx.rect(x,y,w,h); ctx.fill(); ctx.stroke();
+    ctx.fillStyle='#e6edf3';
+    lines.forEach((t,i)=>ctx.fillText(t,x+8,y+16+i*15));
+  }
+  ctx.restore();
+}
+(function(){
+  const cv=document.getElementById('graphCanvas');
+  const pos=e=>{const r=cv.getBoundingClientRect();
+    return {x:(e.clientX-r.left-G.ox)/G.scale, y:(e.clientY-r.top-G.oy)/G.scale};};
+  const hit=p=>G.nodes.find(n=>(n.x-p.x)**2+(n.y-p.y)**2<230);
+  cv.addEventListener('mousedown',e=>{
+    const p=pos(e);
+    G.drag=hit(p);
+    if(!G.drag) G.pan={x:e.clientX-G.ox,y:e.clientY-G.oy};
+  });
+  cv.addEventListener('mousemove',e=>{
+    const p=pos(e);
+    if(G.drag){G.drag.x=p.x; G.drag.y=p.y; draw();}
+    else if(G.pan){G.ox=e.clientX-G.pan.x; G.oy=e.clientY-G.pan.y; draw();}
+    else{
+      const h=hit(p);
+      if(h!==G.hover){G.hover=h; cv.style.cursor=h?'pointer':'grab'; draw();}
+    }
+  });
+  cv.addEventListener('mouseup',()=>{G.drag=null;G.pan=null;});
+  cv.addEventListener('mouseleave',()=>{G.hover=null;G.drag=null;G.pan=null;draw();});
+  cv.addEventListener('wheel',e=>{e.preventDefault();
+    G.scale=Math.max(.3,Math.min(3,G.scale*(e.deltaY<0?1.1:0.9))); draw();});
+})();
+</script>
+</body>
+</html>

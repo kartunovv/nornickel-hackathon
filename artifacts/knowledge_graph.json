@@ -1,0 +1,4906 @@
+{
+ "nodes": [
+  {
+   "id": "pnt_open",
+   "label": "Раскрытый Pnt/Cp",
+   "type": "mineral",
+   "desc": "Свободные зёрна пентландита/халькопирита — уже раскрыты, но не извлечены флотацией"
+  },
+  {
+   "id": "pnt_locked",
+   "label": "Закрытый Pnt/Cp",
+   "type": "mineral",
+   "desc": "Сростки пентландита/халькопирита с породой — требуют доизмельчения"
+  },
+  {
+   "id": "po_admix",
+   "label": "Примесь Ni в пирротине",
+   "type": "mineral",
+   "desc": "Изоморфный никель в решётке пирротина — флотацией не отделяется"
+  },
+  {
+   "id": "silicate",
+   "label": "Силикатная форма / валлериит",
+   "type": "mineral",
+   "desc": "Металл в силикатах и валлериите — текущей технологией не извлекается"
+  },
+  {
+   "id": "millerite",
+   "label": "Миллерит",
+   "type": "mineral",
+   "desc": "Сульфид никеля NiS, потенциально извлекаем"
+  },
+  {
+   "id": "pyrite",
+   "label": "Пирит / другие сульфиды Cu",
+   "type": "mineral",
+   "desc": ""
+  },
+  {
+   "id": "pyrrhotite",
+   "label": "Пирротин",
+   "type": "mineral",
+   "desc": "Магнитный сульфид железа, носитель примесного Ni"
+  },
+  {
+   "id": "grinding",
+   "label": "Измельчение",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "regrinding",
+   "label": "Доизмельчение",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "classification",
+   "label": "Классификация",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "flotation_main",
+   "label": "Основная флотация",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "flotation_scav",
+   "label": "Контрольная флотация",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "flotation_clean",
+   "label": "Перечистная флотация",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "magnetic_sep",
+   "label": "Магнитная сепарация",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "gravity_sep",
+   "label": "Гравитационное обогащение",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "thickening",
+   "label": "Сгущение / контактирование",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "ball_mill",
+   "label": "Шаровая мельница",
+   "type": "equipment",
+   "desc": ""
+  },
+  {
+   "id": "hydrocyclone",
+   "label": "Гидроциклон",
+   "type": "equipment",
+   "desc": ""
+  },
+  {
+   "id": "spiral_classifier",
+   "label": "Спиральный классификатор",
+   "type": "equipment",
+   "desc": ""
+  },
+  {
+   "id": "fine_screen",
+   "label": "Грохот тонкого грохочения",
+   "type": "equipment",
+   "desc": ""
+  },
+  {
+   "id": "flot_machine",
+   "label": "Флотомашина",
+   "type": "equipment",
+   "desc": ""
+  },
+  {
+   "id": "contact_tank",
+   "label": "Контактный чан",
+   "type": "equipment",
+   "desc": ""
+  },
+  {
+   "id": "cone_crusher",
+   "label": "Конусная дробилка",
+   "type": "equipment",
+   "desc": ""
+  },
+  {
+   "id": "grind_fineness",
+   "label": "Тонина помола (% -71 мкм)",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "liner_geometry",
+   "label": "Геометрия футеровки мельниц",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "ball_charge",
+   "label": "Шаровая загрузка (диаметр/класс шаров)",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "cyclone_spigot",
+   "label": "Диаметр песковой насадки гидроциклона",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "pulp_density",
+   "label": "Плотность пульпы",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "flot_time",
+   "label": "Время флотации",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "reagent_regime",
+   "label": "Реагентный режим (ксантогенат, аэрофлот, вспениватель)",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "air_flow",
+   "label": "Расход воздуха / аэрация",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "circulating_load",
+   "label": "Циркулирующая нагрузка",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "water_feed",
+   "label": "Подача воды в мельницы",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "mech_liberation",
+   "label": "Раскрытие сростков",
+   "type": "mechanism",
+   "desc": "Доизмельчение вскрывает сульфидные зёрна из сростков с породой"
+  },
+  {
+   "id": "mech_overgrind",
+   "label": "Переизмельчение / ошламование",
+   "type": "mechanism",
+   "desc": "Тонкие шламы (<10 мкм) плохо флотируются: малая инерция частиц, окисление поверхности"
+  },
+  {
+   "id": "mech_kinetics",
+   "label": "Кинетика флотации",
+   "type": "mechanism",
+   "desc": "Недостаточное время пребывания → недоизвлечение медленно флотируемых зёрен"
+  },
+  {
+   "id": "mech_selectivity",
+   "label": "Селективность разделения",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "mech_bypass",
+   "label": "Проскок крупных частиц",
+   "type": "mechanism",
+   "desc": "Неэффективная классификация пропускает крупные сростки в флотацию"
+  },
+  {
+   "id": "mech_surface",
+   "label": "Гидрофобизация поверхности",
+   "type": "mechanism",
+   "desc": "Собиратель адсорбируется на сульфидной поверхности, повышая флотируемость"
+  },
+  {
+   "id": "mech_magnetic",
+   "label": "Магнитные свойства пирротина",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "kpi_ni_loss",
+   "label": "Потери Ni с хвостами",
+   "type": "kpi",
+   "desc": ""
+  },
+  {
+   "id": "kpi_cu_loss",
+   "label": "Потери Cu с хвостами",
+   "type": "kpi",
+   "desc": ""
+  },
+  {
+   "id": "kpi_recovery",
+   "label": "Сквозное извлечение металлов",
+   "type": "kpi",
+   "desc": ""
+  },
+  {
+   "id": "flotation",
+   "label": "Флотация",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "concentrate",
+   "label": "Концентрат",
+   "type": "product",
+   "desc": ""
+  },
+  {
+   "id": "collective_flotation",
+   "label": "Коллективная флотация",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "multi_component_concentrate",
+   "label": "Многокомпонентный концентрат",
+   "type": "product",
+   "desc": ""
+  },
+  {
+   "id": "flotation_reagents",
+   "label": "флотационные реагенты",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "flotation_efficiency",
+   "label": "эффективность флотации",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "collectors",
+   "label": "собиратели",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "mineral_surface",
+   "label": "поверхность минерала",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "foam_stabilizers",
+   "label": "пенообразователи",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "bubble_stability",
+   "label": "стабильность пузырьков",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "pump",
+   "label": "Насос",
+   "type": "equipment",
+   "desc": ""
+  },
+  {
+   "id": "product_movement",
+   "label": "Перемещение продукта",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "reagent_consumption",
+   "label": "Расход реагентов",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "preliminary_treatment",
+   "label": "Предварительная обработка",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "reagent_effectiveness",
+   "label": "Эффективность реагентов",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "aeration",
+   "label": "Предварительная аэрация пульпы",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "microbubble_formation",
+   "label": "Образование микропузырьков",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "methyl_isobutyl_carbinol",
+   "label": "Метилизобутилкарбинол",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "apolar_reagent_consumption",
+   "label": "Расход аполярного реагента",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "addition_of_grainy_fractions",
+   "label": "Добавление зернистых фракций",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "removal_of_fine_slimes",
+   "label": "Удаление тонких шламов",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "inevitable_ions",
+   "label": "неизбежные ионы",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "flotation_properties",
+   "label": "флотационные свойства",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "reagents",
+   "label": "реагенты",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "soda",
+   "label": "сода",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "calcium_iron_ions",
+   "label": "ионы кальция и железа",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "copper_ions",
+   "label": "ионы меди",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "inactive_anion",
+   "label": "флотационно-неактивный анион",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "ph_change",
+   "label": "изменение pH",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "mineral_solubility",
+   "label": "растворимость минералов",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "cationic_collectors",
+   "label": "катионные собиратели",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "flotation_process",
+   "label": "процесс флотации",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "particle_size",
+   "label": "Размер частиц",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "selectivity",
+   "label": "Селективность флотации",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "hydrophobicity",
+   "label": "Гидрофобность",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "optimal_size",
+   "label": "Оптимальная крупность частиц",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "density",
+   "label": "Плотность",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "particle_shape",
+   "label": "Форма частиц",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "apolar_reagents",
+   "label": "Аполярные реагенты",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "flotation_bubbles",
+   "label": "Выделение пузырьков при флотации",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "gas_supersaturation",
+   "label": "Пересыщение раствора газов",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "selective_flocculation",
+   "label": "Селективная флокуляция",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "flocculant_selectivity",
+   "label": "Избирательность флокулянтов",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "peptization_process",
+   "label": "Процесс пептизации",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "common_reagents",
+   "label": "Обычные реагенты",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "hydrolyzed_polyacrylonitrile",
+   "label": "Гидролизованный полиакрилнитрил",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "selective_for_sulfides",
+   "label": "Селективность для сульфидных минералов",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "upper_limit",
+   "label": "Верхний предел крупности",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "flotation_scheme",
+   "label": "Схема флотации",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "primary_concentrate",
+   "label": "Первичный концентрат",
+   "type": "product",
+   "desc": ""
+  },
+  {
+   "id": "primary_flotation_tails",
+   "label": "Хвосты первичной флотации",
+   "type": "product",
+   "desc": ""
+  },
+  {
+   "id": "iron_ions",
+   "label": "Ионы железа",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "iron_hydroxides",
+   "label": "Гидроокиси железа",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "silicate_glass",
+   "label": "Жидкое стекло",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "pulp_peptization",
+   "label": "Пептизация пульпы",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "prolonged_contact",
+   "label": "Длительный контакт",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "collector",
+   "label": "Собиратель",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "short_contact",
+   "label": "Короткий контакт",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "fraction_collector",
+   "label": "Дробная подача собирателя",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "selective_interaction",
+   "label": "Избирательное взаимодействие",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "tailings",
+   "label": "Отвальные хвосты",
+   "type": "material",
+   "desc": ""
+  },
+  {
+   "id": "reagent_depressant",
+   "label": "Реагенты-подавители",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "suppress_minerals",
+   "label": "Подавление легкофлотируемых минералов",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "flotation_speed",
+   "label": "Скорость флотации",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "graphite_content",
+   "label": "Содержание графита",
+   "type": "mineral",
+   "desc": ""
+  },
+  {
+   "id": "pulp_ph",
+   "label": "pH пульпы",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "activation_depression",
+   "label": "Активация/подавление",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "sodium_sulfide",
+   "label": "Сернистый натрий",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "activator_depressor",
+   "label": "Активатор/подавитель",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "liquid_glass",
+   "label": "Жидкое стекло",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "reagent_feeder",
+   "label": "Реагентный питатель",
+   "type": "equipment",
+   "desc": ""
+  },
+  {
+   "id": "reagent_apolar",
+   "label": "Аполярные реагенты",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "reagent_heteropolar",
+   "label": "Гетерополярные реагенты",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "surfactant",
+   "label": "Поверхностно-активные вещества",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "flotation_mechanism",
+   "label": "Механизм флотации",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "reagent_regulator",
+   "label": "Реагенты-регуляторы",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "flotation_coal",
+   "label": "Флотация углей",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "reagent_AAR1_AAR2",
+   "label": "Реагенты ААР-1 и ААР-2",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "flotation_activity",
+   "label": "Флотационная активность",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "selective_wetting",
+   "label": "Собирательное действие (избирательное смачивание)",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "heteropolar_reagents",
+   "label": "Поверхностно-активные реагенты из гетерополярных молекул",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "oriented_adsorption",
+   "label": "Сильное пенообразующее действие (ориентированная адсорбция)",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "inorganic_reagents",
+   "label": "Неорганические реагенты",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "optimal_conditions",
+   "label": "Активация в оптимальных условиях",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "organic_colloids",
+   "label": "Органические коллоиды",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "pH_change",
+   "label": "Регулирующее действие (изменение pH среды)",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "mineral_oil_flotation",
+   "label": "Масляная флотация",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "sulfide_minerals",
+   "label": "Сульфидные минералы",
+   "type": "mineral",
+   "desc": ""
+  },
+  {
+   "id": "mineral_oils",
+   "label": "Минеральные масла",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "non_sulfide_minerals",
+   "label": "Несульфидные минералы",
+   "type": "mineral",
+   "desc": ""
+  },
+  {
+   "id": "flotation_theory",
+   "label": "Теория флотации",
+   "type": "theory",
+   "desc": ""
+  },
+  {
+   "id": "surface_chemistry",
+   "label": "Физическая химия поверхностных явлений",
+   "type": "science",
+   "desc": ""
+  },
+  {
+   "id": "langmuir_work",
+   "label": "Работы И. Лэнгмюра",
+   "type": "research",
+   "desc": ""
+  },
+  {
+   "id": "garkins_work",
+   "label": "Работы В. Д. Гаркинса",
+   "type": "research",
+   "desc": ""
+  },
+  {
+   "id": "gromek_work",
+   "label": "Работы И. С. Громека",
+   "type": "research",
+   "desc": ""
+  },
+  {
+   "id": "gurvich_work",
+   "label": "Работы Л. П. Гурвича",
+   "type": "research",
+   "desc": ""
+  },
+  {
+   "id": "surface_microrelief",
+   "label": "Неоднородность микрорельефа поверхности минерала",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "nonuniform_reagent_distribution",
+   "label": "Неравномерное распределение реагентов на поверхности",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "mineral_surface_heterogeneity",
+   "label": "Неоднородность свойств поверхности минералов",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "reagent_adsorption",
+   "label": "Адсорбция флотационных реагентов",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "electrochemical_heterogeneity",
+   "label": "Электрохимическая неоднородность поверхности сульфидов",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "interaction_with_reagents",
+   "label": "Механизм взаимодействия с ксантогенатами и другими реагентами",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "pine_oil",
+   "label": "Сосновое масло",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "opsb",
+   "label": "ОПСБ",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "op_7_op_10",
+   "label": "ОП-7 и ОП-10",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "mibk",
+   "label": "МИБК",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "reagent_depressor",
+   "label": "Реагенты-подавители",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "cyanide",
+   "label": "Цианиды",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "dissolution_of_collector",
+   "label": "Растворение собирателя",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "foam_structure",
+   "label": "Строение пены",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "foam_stability",
+   "label": "Устойчивость пены",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "transportation_efficiency",
+   "label": "Эффективность транспортировки",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "particle_attachment",
+   "label": "Прилипание частиц",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "reagent_group_1",
+   "label": "Реагенты первой группы",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "reagent_group_2",
+   "label": "Реагенты второй группы",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "reagent_group_3",
+   "label": "Реагенты третьей группы",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "foam",
+   "label": "Пена",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "reagent_effect_on_stability",
+   "label": "Действие реагентов на устойчивость пены",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "mineral_particle_attachment",
+   "label": "Прочность прикрепления минеральных частиц к пузырькам",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "destruction_foam",
+   "label": "Разрушение флотационных пен",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "slimes_presence",
+   "label": "Присутствие тонких шламов в пульпе",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "strong_water_jet",
+   "label": "Применение сильной струи воды",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "intermediate_product",
+   "label": "Промежуточный продукт",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "optimal_value",
+   "label": "Оптимальное значение",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "simple_reagent_regime",
+   "label": "Простые реагентный режим с применением пенообразователей и малорастворимых в вод",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "adhesion_strength",
+   "label": "Большая прочность прилипания к воздушным пузырькам",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "flotation_of_large_particles",
+   "label": "Флотация сравнительно крупных частиц",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "slime_formation",
+   "label": "Образование тонких шламов",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "separation_by_size",
+   "label": "Разделение по крупности",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "sulfhydryl_collectors",
+   "label": "Сульфгидрильные собиратели",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "sulfidization",
+   "label": "Сульфидизация хвостов",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "combined_method",
+   "label": "Комбинированный метод",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "hydrometallurgy",
+   "label": "Гидрометаллургия",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "crushed_ore",
+   "label": "Измельчённая руда",
+   "type": "material",
+   "desc": ""
+  },
+  {
+   "id": "leaching",
+   "label": "Выщелачивание",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "copper_solution",
+   "label": "Раствор меди",
+   "type": "material",
+   "desc": ""
+  },
+  {
+   "id": "flotation_selectivity",
+   "label": "Селективность флотации",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "apathy_flotation",
+   "label": "Флотация апатита",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "phosphoric_acid_salts",
+   "label": "Фосфорнокислые соли",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "carbonate_flotation",
+   "label": "Флотация карбонатов",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "reverse_flotation",
+   "label": "Обратная флотация",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "nepheline_concentrate",
+   "label": "Нефелиновый концентрат",
+   "type": "product",
+   "desc": ""
+  },
+  {
+   "id": "direct_flotation",
+   "label": "Прямая флотация",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "phosphate_concentrate",
+   "label": "Фосфатный концентрат",
+   "type": "product",
+   "desc": ""
+  },
+  {
+   "id": "reagent_effect",
+   "label": "Эффект реагента",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "adsorbed_reagent",
+   "label": "Адсорбированный реагент",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "ethyloxanthate_amyl_combination",
+   "label": "Сочетание этилового и амилового ксантогенатов",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "galena_flotation",
+   "label": "Флотация галенита",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "reagent_concentration",
+   "label": "Концентрация собирателя",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "interaction_speed",
+   "label": "Скорость взаимодействия с собирателем",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "separate_conditioning",
+   "label": "Метод раздельного кондиционирования",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "flotation_performance",
+   "label": "Показатели флотации",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "adsorption_layer_formation",
+   "label": "Формирование адсорбционного слоя",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "particle_activity",
+   "label": "Активность частиц минерала",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "particle_reactivity",
+   "label": "Реактивность частиц",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "particle_preparation",
+   "label": "Подготовка частиц к флотации",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "pH_value",
+   "label": "Значение pH",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "reagent_deactivation",
+   "label": "Деактивация реагентов",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "flotation_suppression",
+   "label": "Подавление флотации",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "hydroxide_ions",
+   "label": "Гидроксильные ионы",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "pH_critical_value",
+   "label": "Критическое значение pH",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "cyanide_sodium",
+   "label": "Цианистый натрий",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "hydrolysis",
+   "label": "Гидролиз",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "collector_concentration",
+   "label": "Концентрация собирателя",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "flot_machine_productivity",
+   "label": "Производительность флотомашины",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "bubble_size",
+   "label": "Диаметр пузырьков",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "compartment_design",
+   "label": "Конструкция с перегородками",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "aeration_device",
+   "label": "Аэрирующее устройство",
+   "type": "equipment",
+   "desc": ""
+  },
+  {
+   "id": "coarsely_ground_pulp",
+   "label": "Грубоизмельчённая пульпа",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "free_mineral_grains",
+   "label": "Свободные зёрна минералов",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "mineral_composition",
+   "label": "Минеральный состав",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "mineral_intergrowth",
+   "label": "Характер срастания минералов",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "granulometric_characteristics",
+   "label": "Гранулометрическая характеристика",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "flotation_results",
+   "label": "Результаты флотации",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "flotation_machine_design",
+   "label": "Конструкция флотационной машины",
+   "type": "equipment",
+   "desc": ""
+  },
+  {
+   "id": "water_recycling",
+   "label": "Полный водооборот",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "environmental_impact",
+   "label": "Загрязнение окружающей среды",
+   "type": "kpi",
+   "desc": ""
+  },
+  {
+   "id": "factory_productivity",
+   "label": "Производительность фабрики",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "processing_cost",
+   "label": "Себестоимость флотации",
+   "type": "kpi",
+   "desc": ""
+  },
+  {
+   "id": "coal_enrichment",
+   "label": "обогащение угля",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "mechanization_of_mining",
+   "label": "механизация добычи",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "content_of_small_classes",
+   "label": "содержание мелких классов",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "mineralogical_composition",
+   "label": "минералого-петрографический состав",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "flot_machine_fppm_20",
+   "label": "Пневматическая машина ФППМ-20",
+   "type": "equipment",
+   "desc": ""
+  },
+  {
+   "id": "flot_machine_fmu_50_and_mfu2_63",
+   "label": "Машины ФМУ-50 и МФУ2-63",
+   "type": "equipment",
+   "desc": ""
+  },
+  {
+   "id": "flotation_unit",
+   "label": "Флотационная установка",
+   "type": "equipment",
+   "desc": ""
+  },
+  {
+   "id": "treatment_plant",
+   "label": "Обогатительная фабрика",
+   "type": "equipment",
+   "desc": ""
+  },
+  {
+   "id": "ксантогенаты",
+   "label": "Ксантогенаты",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "сульфидизация",
+   "label": "Сульфидизация",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "oleic_acid",
+   "label": "Олеиновая кислота",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "dispersants",
+   "label": "Диспергаторы",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "lower_temperature",
+   "label": "Пониженная температура",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "извлечение_крупного_золота",
+   "label": "Извлечение крупного золота",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "измельчение_и_дробление",
+   "label": "Цикл дробление – измельчение",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "затирание_крупного_золота",
+   "label": "Затирание крупных частиц золота",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "крупное_золото",
+   "label": "Крупное золото",
+   "type": "mineral",
+   "desc": ""
+  },
+  {
+   "id": "низкую_флотационную_активность",
+   "label": "Низкая флотационная активность",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "гравитационное_обогащение",
+   "label": "Гравитационное обогащение",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "различие_плотности_минералов",
+   "label": "Различие плотности минералов",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "surface_properties",
+   "label": "Удельная поверхность частиц",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "flotation_system",
+   "label": "Флотационная система",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "heterogeneous_system",
+   "label": "Гетерогенная, дисперсная, многофазная и многокомпонентная система",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "mineral_particles",
+   "label": "Минеральные частицы",
+   "type": "mineral",
+   "desc": ""
+  },
+  {
+   "id": "gas_bubbles",
+   "label": "Газовые пузырьки",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "particle_heterogeneity",
+   "label": "Неоднородность частиц",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "floculation",
+   "label": "Флокуляция частиц",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "slimes_effect",
+   "label": "Влияние тонких шламов",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "pulp_movement",
+   "label": "Перемещение пульпы",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "selective_flotation",
+   "label": "Селективная флотация",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "foam_fractionation",
+   "label": "Пенное фракционирование",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "wastewater_treatment",
+   "label": "Очистка сточных вод",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "flot_extraction",
+   "label": "Флотоэкстракция",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "concentration_hydrophobic",
+   "label": "Концентрирование гидрофобных соединений",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "electroflotation",
+   "label": "Электрофлотация",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "enrichment_fines",
+   "label": "Обогащение тонковкрапленных руд",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "feeder",
+   "label": "Питатель",
+   "type": "equipment",
+   "desc": ""
+  },
+  {
+   "id": "reagent_flow",
+   "label": "Расход реагента",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "concentrate_quality",
+   "label": "Качество концентрата",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "oxygen_concentration_decrease",
+   "label": "Снижение концентрации кислорода",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "bitumen_content",
+   "label": "Содержание битумов в пустой породе",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "clay_slimes",
+   "label": "Тонкодисперсные глинистые шламы",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "gypsum",
+   "label": "Гипс",
+   "type": "mineral",
+   "desc": ""
+  },
+  {
+   "id": "reagent_combination",
+   "label": "Сочетание реагентов",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "primary_concentration",
+   "label": "Первичная концентрация золота",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "complex_use",
+   "label": "Комплексное использование руд",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "harmful_components",
+   "label": "Вредные компоненты",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "flotability",
+   "label": "Флотируемость золота",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "oxygen",
+   "label": "Взаимодействие золота с кислородом",
+   "type": "mechanism",
+   "desc": ""
+  },
+  {
+   "id": "ксантогенат",
+   "label": "Закрепление ксантогената",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "copper_sulfides",
+   "label": "Медные сульфиды",
+   "type": "mineral",
+   "desc": ""
+  },
+  {
+   "id": "ph_level",
+   "label": "Уровень pH",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "reagent_choice",
+   "label": "Выбор реагента",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "pH_adjustment",
+   "label": "Корректировка pH",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "alkalinity_reduction",
+   "label": "Снижение щелочности",
+   "type": "operation",
+   "desc": ""
+  },
+  {
+   "id": "galena",
+   "label": "Галенит",
+   "type": "mineral",
+   "desc": ""
+  },
+  {
+   "id": "gold_loss",
+   "label": "Потери свободного золота",
+   "type": "kpi",
+   "desc": ""
+  },
+  {
+   "id": "copper_sulfate",
+   "label": "Медный купорос",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "zinc_blende",
+   "label": "Цинковая обманка",
+   "type": "mineral",
+   "desc": ""
+  },
+  {
+   "id": "limestone",
+   "label": "Известь",
+   "type": "reagent",
+   "desc": ""
+  },
+  {
+   "id": "reduce_energy_consumption",
+   "label": "Сокращение энергопотребления",
+   "type": "parameter",
+   "desc": ""
+  },
+  {
+   "id": "collective_concentrate",
+   "label": "Коллективный концентрат",
+   "type": "product",
+   "desc": ""
+  },
+  {
+   "id": "flotation_kinetics",
+   "label": "Кинетика флотации",
+   "type": "mechanism",
+   "desc": ""
+  }
+ ],
+ "edges": [
+  {
+   "src": "pnt_locked",
+   "rel": "требует",
+   "dst": "mech_liberation",
+   "desc": "закрытые сростки извлекаются только после раскрытия",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "pnt_open",
+   "rel": "теряется_из_за",
+   "dst": "mech_kinetics",
+   "desc": "раскрытые зёрна теряются при нехватке времени/реагентов",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "pnt_open",
+   "rel": "теряется_из_за",
+   "dst": "mech_overgrind",
+   "desc": "раскрытые зёрна в классе -10 мкм ошламованы",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "po_admix",
+   "rel": "связан_с",
+   "dst": "mech_magnetic",
+   "desc": "пирротин выделяется магнитной сепарацией",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "millerite",
+   "rel": "извлекается_через",
+   "dst": "mech_surface",
+   "desc": "миллерит флотируется при усиленном собирателе",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "pnt_locked",
+   "rel": "влияет_на",
+   "dst": "kpi_ni_loss",
+   "desc": "",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "pnt_open",
+   "rel": "влияет_на",
+   "dst": "kpi_ni_loss",
+   "desc": "",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "po_admix",
+   "rel": "влияет_на",
+   "dst": "kpi_ni_loss",
+   "desc": "",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "silicate",
+   "rel": "влияет_на",
+   "dst": "kpi_ni_loss",
+   "desc": "неизвлекаемая форма — потолок извлечения",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "pnt_open",
+   "rel": "влияет_на",
+   "dst": "kpi_cu_loss",
+   "desc": "",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "pnt_locked",
+   "rel": "влияет_на",
+   "dst": "kpi_cu_loss",
+   "desc": "",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "regrinding",
+   "rel": "усиливает",
+   "dst": "mech_liberation",
+   "desc": "отдельный цикл доизмельчения песков/промпродукта",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "grinding",
+   "rel": "усиливает",
+   "dst": "mech_liberation",
+   "desc": "",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "grinding",
+   "rel": "может_вызывать",
+   "dst": "mech_overgrind",
+   "desc": "избыточное измельчение легко шламуемых сульфидов",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "classification",
+   "rel": "предотвращает",
+   "dst": "mech_bypass",
+   "desc": "точная классификация не пропускает крупные классы",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "classification",
+   "rel": "предотвращает",
+   "dst": "mech_overgrind",
+   "desc": "своевременный вывод готового класса из цикла",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "fine_screen",
+   "rel": "улучшает",
+   "dst": "classification",
+   "desc": "грохочение разделяет по размеру, а не по плотности",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "hydrocyclone",
+   "rel": "реализует",
+   "dst": "classification",
+   "desc": "",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "spiral_classifier",
+   "rel": "реализует",
+   "dst": "classification",
+   "desc": "",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "magnetic_sep",
+   "rel": "выделяет",
+   "dst": "pyrrhotite",
+   "desc": "магнитная фракция с примесным Ni",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "gravity_sep",
+   "rel": "извлекает",
+   "dst": "pnt_open",
+   "desc": "плотные сульфиды из крупных классов",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "flotation_scav",
+   "rel": "извлекает",
+   "dst": "pnt_open",
+   "desc": "медленно флотируемые зёрна",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "contact_tank",
+   "rel": "усиливает",
+   "dst": "mech_surface",
+   "desc": "время контакта пульпы с реагентами",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "liner_geometry",
+   "rel": "настраивает",
+   "dst": "grinding",
+   "desc": "профиль футеровки меняет траекторию шаров и энергию удара",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "ball_charge",
+   "rel": "настраивает",
+   "dst": "grinding",
+   "desc": "диаметр шаров определяет баланс удар/истирание",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "grind_fineness",
+   "rel": "управляет",
+   "dst": "mech_liberation",
+   "desc": "",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "cyclone_spigot",
+   "rel": "настраивает",
+   "dst": "hydrocyclone",
+   "desc": "диаметр насадки смещает границу разделения",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "pulp_density",
+   "rel": "настраивает",
+   "dst": "flotation_main",
+   "desc": "плотность влияет на время пребывания и вязкость",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "pulp_density",
+   "rel": "настраивает",
+   "dst": "hydrocyclone",
+   "desc": "",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "flot_time",
+   "rel": "управляет",
+   "dst": "mech_kinetics",
+   "desc": "",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "reagent_regime",
+   "rel": "управляет",
+   "dst": "mech_surface",
+   "desc": "",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "air_flow",
+   "rel": "управляет",
+   "dst": "mech_kinetics",
+   "desc": "",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "circulating_load",
+   "rel": "настраивает",
+   "dst": "classification",
+   "desc": "",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "water_feed",
+   "rel": "настраивает",
+   "dst": "grinding",
+   "desc": "разжижение пульпы в мельнице",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "cone_crusher",
+   "rel": "влияет_на",
+   "dst": "grind_fineness",
+   "desc": "гранулометрия питания мельниц",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "regrinding",
+   "rel": "снижает",
+   "dst": "kpi_ni_loss",
+   "desc": "",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "flotation_scav",
+   "rel": "снижает",
+   "dst": "kpi_ni_loss",
+   "desc": "",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "magnetic_sep",
+   "rel": "снижает",
+   "dst": "kpi_ni_loss",
+   "desc": "",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "определяет",
+   "dst": "kpi_recovery",
+   "desc": "",
+   "sources": [
+    "ontology"
+   ]
+  },
+  {
+   "src": "regrinding",
+   "rel": "направляет",
+   "dst": "grinding",
+   "desc": "При необходимости доизмельчения промежуточных продуктов последние направляются в первоначальное измельчение.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p254_0"
+   ]
+  },
+  {
+   "src": "grinding",
+   "rel": "влияет",
+   "dst": "flotation",
+   "desc": "Тонкие шламы, образующиеся при измельчении, могут влиять на флотацию.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p254_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "выделяет",
+   "dst": "concentrate",
+   "desc": "В процессе основной флотации выделяются готовые продукты, такие как концентраты.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p254_0"
+   ]
+  },
+  {
+   "src": "collective_flotation",
+   "rel": "получает",
+   "dst": "multi_component_concentrate",
+   "desc": "При коллективной флотации получают концентрат, содержащий одновременно несколько полезных компонентов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p254_0"
+   ]
+  },
+  {
+   "src": "flotation_reagents",
+   "rel": "обеспечивают",
+   "dst": "flotation_efficiency",
+   "desc": "Реагенты обеспечивают высокую избирательность, стабильность и эффективность флотационного процесса.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p47_0"
+   ]
+  },
+  {
+   "src": "collectors",
+   "rel": "гидрофобизируют",
+   "dst": "mineral_surface",
+   "desc": "Собиратели концентрируются на поверхности раздела минерал — вода и гидрофобизируют частицы минерала.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p47_0"
+   ]
+  },
+  {
+   "src": "foam_stabilizers",
+   "rel": "увеличивают",
+   "dst": "bubble_stability",
+   "desc": "Пенообразователи увеличивают устойчивость флотационной пены, повышая стабильность минерализованного пузырька.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p47_0"
+   ]
+  },
+  {
+   "src": "flotation_clean",
+   "rel": "requires",
+   "dst": "flot_machine",
+   "desc": "Для перечистной флотации требуется три камеры флотомашины.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p257_0",
+    "geokniga-flotacionnye-metody-obogashchen_p256_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "requires",
+   "dst": "flot_machine",
+   "desc": "Для основной флотации требуется пять камер флотомашины.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p257_0",
+    "geokniga-flotacionnye-metody-obogashchen_p258_0"
+   ]
+  },
+  {
+   "src": "flotation_scav",
+   "rel": "requires",
+   "dst": "flot_machine",
+   "desc": "Для контрольной флотации требуется две камеры флотомашины.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p257_0"
+   ]
+  },
+  {
+   "src": "flotation_clean",
+   "rel": "affects",
+   "dst": "pump",
+   "desc": "Неправильное распределение операций флотации может потребовать установки насоса для подачи продукта перечистной флотации в начало цикла.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p257_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "influences",
+   "dst": "product_movement",
+   "desc": "Правильное распределение операций флотации позволяет продуктам перемещаться самотеком, без необходимости использования насоса.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p257_0"
+   ]
+  },
+  {
+   "src": "reagent_regime",
+   "rel": "увеличивает",
+   "dst": "reagent_consumption",
+   "desc": "Мелкие капельки реагентов проникают в поры, что увеличивает расход реагентов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p264_0"
+   ]
+  },
+  {
+   "src": "preliminary_treatment",
+   "rel": "улучшает",
+   "dst": "reagent_effectiveness",
+   "desc": "Диспергирование эмульсий пенообразователей предварительной их обработкой поверхностно-активными веществами улучшает действие реагентов при флотации углей.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p264_0"
+   ]
+  },
+  {
+   "src": "aeration",
+   "rel": "способствует",
+   "dst": "microbubble_formation",
+   "desc": "Предварительная аэрация пульпы способствует сорбции газов и образованию микропузырьков.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p264_0"
+   ]
+  },
+  {
+   "src": "methyl_isobutyl_carbinol",
+   "rel": "снижает",
+   "dst": "apolar_reagent_consumption",
+   "desc": "При расходе метилизобутилкарбинола 45 г/т расход аполярного реагента (солярового масла) составляет всего 250 г/т.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p264_0"
+   ]
+  },
+  {
+   "src": "pulp_density",
+   "rel": "снижает",
+   "dst": "kpi_ni_loss",
+   "desc": "Применение более разбавленных пульп уменьшает переход тонких частиц пустой породы в пену, что снижает потери никеля.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p172_0"
+   ]
+  },
+  {
+   "src": "reagent_regime",
+   "rel": "улучшает",
+   "dst": "mech_kinetics",
+   "desc": "Дробная подача реагентов-собирателей поддерживает постоянную концентрацию реагентов в пульпе, улучшая кинетику флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p172_0"
+   ]
+  },
+  {
+   "src": "classification",
+   "rel": "повышает",
+   "dst": "mech_selectivity",
+   "desc": "Предварительная классификация пульпы на песковую и шламовую части с раздельным контактом с реагентами повышает селективность разделения.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p172_0"
+   ]
+  },
+  {
+   "src": "reagent_regime",
+   "rel": "снижает",
+   "dst": "mech_overgrind",
+   "desc": "Применение реагентов, снижающих поглощение собирателя шламами, уменьшает переизмельчение и ошламование.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p172_0"
+   ]
+  },
+  {
+   "src": "addition_of_grainy_fractions",
+   "rel": "улучшает",
+   "dst": "flotation_efficiency",
+   "desc": "Добавление к пульпе зернистых фракций улучшает эффективность флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p172_0"
+   ]
+  },
+  {
+   "src": "removal_of_fine_slimes",
+   "rel": "повышает",
+   "dst": "flotation_efficiency",
+   "desc": "Удаление тонких шламов из пульпы и флотация обесшламленной пульпы повышают эффективность флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p172_0"
+   ]
+  },
+  {
+   "src": "grinding",
+   "rel": "необходим для",
+   "dst": "mech_liberation",
+   "desc": "Измельчение материала перед флотацией необходимо для разделения сростков отдельных минералов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p242_0"
+   ]
+  },
+  {
+   "src": "grind_fineness",
+   "rel": "влияет на",
+   "dst": "flotation_main",
+   "desc": "Характеристики крупности исходного материала влияют на флотацию, изменяя флотируемость частиц в зависимости от их крупности и степени раскрытия сростков.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p242_0"
+   ]
+  },
+  {
+   "src": "grind_fineness",
+   "rel": "определяет",
+   "dst": "mech_kinetics",
+   "desc": "Оптимальная гранулометрическая характеристика флотируемого материала обеспечивает достаточную скорость и избирательность флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p242_0"
+   ]
+  },
+  {
+   "src": "grind_fineness",
+   "rel": "влияет на",
+   "dst": "mech_selectivity",
+   "desc": "Оптимальная крупность частиц способствует лучшей флотации и избирательности процесса.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p242_0"
+   ]
+  },
+  {
+   "src": "pulp_density",
+   "rel": "изменяется при",
+   "dst": "grind_fineness",
+   "desc": "Оптимальные условия флотации, включая плотность пульпы, изменяются при флотации материала разной крупности.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p242_0"
+   ]
+  },
+  {
+   "src": "reagent_regime",
+   "rel": "зависит от",
+   "dst": "grind_fineness",
+   "desc": "Оптимальные условия флотации, включая реагентный режим, изменяются при флотации материала разной крупности.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p242_0"
+   ]
+  },
+  {
+   "src": "inevitable_ions",
+   "rel": "change",
+   "dst": "flotation_properties",
+   "desc": "Неизбежные ионы, закрепляясь на поверхностях, изменяют их флотационные свойства.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p248_0"
+   ]
+  },
+  {
+   "src": "inevitable_ions",
+   "rel": "react",
+   "dst": "reagents",
+   "desc": "Неизбежные ионы могут вступать в химическую реакцию с реагентами, например, ионы кальция образуют с жирными кислотами малорастворимые кальциевые мыла.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p248_0"
+   ]
+  },
+  {
+   "src": "soda",
+   "rel": "neutralize",
+   "dst": "calcium_iron_ions",
+   "desc": "Сода и некоторые другие щелочи выводят в нерастворимые соединения ионы кальция и железа.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p248_0"
+   ]
+  },
+  {
+   "src": "copper_ions",
+   "rel": "translate",
+   "dst": "inactive_anion",
+   "desc": "Ионы меди (и других тяжелых металлов) переводятся во флотационно-неактивный анион.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p248_0"
+   ]
+  },
+  {
+   "src": "ph_change",
+   "rel": "regulate",
+   "dst": "mineral_solubility",
+   "desc": "Изменением pH пульпы можно регулировать растворимость минералов и концентрацию неизбежных ионов в жидкой фазе пульпы.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p248_0"
+   ]
+  },
+  {
+   "src": "cationic_collectors",
+   "rel": "improve",
+   "dst": "flotation_process",
+   "desc": "Применение катионных собирателей вместо жирных кислот позволяет устранить нежелательное действие неизбежных ионов на флотацию.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p248_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "depends_on",
+   "dst": "grind_fineness",
+   "desc": "Флотируемость минералов сильно зависит от размера частиц.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p165_0"
+   ]
+  },
+  {
+   "src": "mech_liberation",
+   "rel": "improves_with",
+   "dst": "grinding",
+   "desc": "Раскрытие сростков улучшается при более тонком измельчении.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p165_0"
+   ]
+  },
+  {
+   "src": "particle_size",
+   "rel": "affects",
+   "dst": "selectivity",
+   "desc": "Самые тонкие фракции концентрата имеют пониженное качество в результате худшей селективности флотации мельчайших частиц.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p165_0"
+   ]
+  },
+  {
+   "src": "hydrophobicity",
+   "rel": "influences",
+   "dst": "optimal_size",
+   "desc": "Оптимальная крупность частиц, при которой достигается лучшая флотируемость, зависит от их гидрофобности.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p165_0"
+   ]
+  },
+  {
+   "src": "density",
+   "rel": "influences",
+   "dst": "optimal_size",
+   "desc": "Оптимальная крупность частиц, при которой достигается лучшая флотируемость, зависит от плотности частиц.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p165_0"
+   ]
+  },
+  {
+   "src": "particle_shape",
+   "rel": "influences",
+   "dst": "flotation_efficiency",
+   "desc": "Наличие острых граней обычно улучшает флотацию.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p165_0"
+   ]
+  },
+  {
+   "src": "flotation_process",
+   "rel": "uses",
+   "dst": "apolar_reagents",
+   "desc": "Аполярные реагенты используются для улучшения извлечения полезных минералов из шламов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p173_0"
+   ]
+  },
+  {
+   "src": "flotation_bubbles",
+   "rel": "depends_on",
+   "dst": "gas_supersaturation",
+   "desc": "Процесс выделения газов тонко регулируется пересыщением их раствора в воде пульпы и кинетикой изменения этого пересыщения.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p173_0"
+   ]
+  },
+  {
+   "src": "selective_flocculation",
+   "rel": "depends_on",
+   "dst": "flocculant_selectivity",
+   "desc": "Метод селективной флокуляции зависит от избирательности действия флокулянтов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p173_0"
+   ]
+  },
+  {
+   "src": "peptization_process",
+   "rel": "uses",
+   "dst": "common_reagents",
+   "desc": "При флотации тонкоизмельченных таконитовых руд вначале материал пептизируется обычными реагентами.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p173_0"
+   ]
+  },
+  {
+   "src": "hydrolyzed_polyacrylonitrile",
+   "rel": "is",
+   "dst": "selective_for_sulfides",
+   "desc": "Гидролизованный полиакрилнитрил является достаточно селективным для некоторых сульфидных минералов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p173_0"
+   ]
+  },
+  {
+   "src": "particle_size",
+   "rel": "has",
+   "dst": "upper_limit",
+   "desc": "Существует верхний предел крупности флотируемых частиц.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p173_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "is_initial_stage",
+   "dst": "flotation_scheme",
+   "desc": "Начальная операция флотации для разделения определённых групп минералов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p253_0"
+   ]
+  },
+  {
+   "src": "flotation_clean",
+   "rel": "improves_concentrate_quality",
+   "dst": "primary_concentrate",
+   "desc": "Повторная флотация первичных концентратов или продуктов концентратной ветви схемы для повышения качества концентратов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p253_0"
+   ]
+  },
+  {
+   "src": "flotation_scav",
+   "rel": "reduces_mineral_content_in_tails",
+   "dst": "primary_flotation_tails",
+   "desc": "Операция перечистки хвостов первичной флотации или продуктов хвостовой ветви схемы для уменьшения содержания флотируемого минерала в хвостах.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p253_0"
+   ]
+  },
+  {
+   "src": "regrinding",
+   "rel": "предшествует",
+   "dst": "flotation_clean",
+   "desc": "Доизмельчение коллективных концентратов предшествует их перечистной флотации для разделения полезных компонентов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p255_0"
+   ]
+  },
+  {
+   "src": "grinding",
+   "rel": "влияет на",
+   "dst": "mech_liberation",
+   "desc": "Измельчение влияет на раскрытие сростков полезных минералов в процессе флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p255_0",
+    "geokniga-flotacionnye-metody-obogashchen_p269_0",
+    "geokniga-flotacionnye-metody-obogashchen_p286_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "выводит",
+   "dst": "pnt_open",
+   "desc": "Основная флотация выводит раскрытые полезные минералы из руды.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p255_0"
+   ]
+  },
+  {
+   "src": "flotation_scav",
+   "rel": "доизвлекает",
+   "dst": "pnt_locked",
+   "desc": "Контрольная флотация доизвлекает закрытые полезные минералы из хвостов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p255_0"
+   ]
+  },
+  {
+   "src": "flotation_scheme",
+   "rel": "зависит от",
+   "dst": "flotation_properties",
+   "desc": "Схема флотации зависит от флотационных свойств обогащаемого материала.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p255_0"
+   ]
+  },
+  {
+   "src": "flotation_scheme",
+   "rel": "влияет на",
+   "dst": "kpi_recovery",
+   "desc": "Выбор схемы флотации влияет на сквозное извлечение металлов из руды.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p255_0"
+   ]
+  },
+  {
+   "src": "grinding",
+   "rel": "activates",
+   "dst": "iron_ions",
+   "desc": "При измельчении несульфидных руд активирующее действие ионов железа способствует флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p249_0"
+   ]
+  },
+  {
+   "src": "soda",
+   "rel": "transforms",
+   "dst": "iron_hydroxides",
+   "desc": "Добавление соды в мельницы переводит железо в малорастворимые гидроокиси.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p249_0"
+   ]
+  },
+  {
+   "src": "silicate_glass",
+   "rel": "improves",
+   "dst": "pulp_peptization",
+   "desc": "Добавление жидкого стекла в слив мельниц улучшает пептизацию пульпы в классификаторах.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p249_0"
+   ]
+  },
+  {
+   "src": "contact_tank",
+   "rel": "provides",
+   "dst": "prolonged_contact",
+   "desc": "Реагенты-регуляторы подают в специальные контактные чаны для увеличения продолжительности контакта с минералами.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p249_0"
+   ]
+  },
+  {
+   "src": "collector",
+   "rel": "requires",
+   "dst": "short_contact",
+   "desc": "Для реагентов-собирателей обычно необходим контакт с пульпой в течение нескольких минут.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p249_0"
+   ]
+  },
+  {
+   "src": "fraction_collector",
+   "rel": "enhances",
+   "dst": "selective_interaction",
+   "desc": "Дробная подача собирателя способствует более избирательному взаимодействию минералов с собирателем.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p249_0"
+   ]
+  },
+  {
+   "src": "grinding",
+   "rel": "causes",
+   "dst": "mech_liberation",
+   "desc": "Для раскрытия сростков чешуйчатых руд достаточно измельчать их до -0,8 или -0,6 мм.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p268_0",
+    "geokniga-flotacionnye-metody-obogashchen_p243_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "produces",
+   "dst": "tailings",
+   "desc": "В основной флотации удается получить отвальные хвосты.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p268_0"
+   ]
+  },
+  {
+   "src": "flotation_clean",
+   "rel": "produces",
+   "dst": "concentrate",
+   "desc": "Кондиционные концентраты с зольностью около 4-5% получают после многократных перечисток при стадийном доизмельчении.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p268_0"
+   ]
+  },
+  {
+   "src": "reagent_depressant",
+   "rel": "used_for",
+   "dst": "suppress_minerals",
+   "desc": "Жидкое стекло и подобные реагенты-подавители применяют для подавления легкофлотируемых минералов, таких как кальцит.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p268_0"
+   ]
+  },
+  {
+   "src": "flotation_speed",
+   "rel": "affected_by",
+   "dst": "graphite_content",
+   "desc": "Скорость флотации плотнокристаллических руд меньше из-за наличия медленно флотирующегося скрытокристаллического графита.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p268_0"
+   ]
+  },
+  {
+   "src": "grinding",
+   "rel": "приводит_к",
+   "dst": "mech_liberation",
+   "desc": "Измельчение талькомагнезитового камня до определенного размера частиц способствует раскрытию минеральных сростков.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p270_0"
+   ]
+  },
+  {
+   "src": "reagent_regime",
+   "rel": "влияет_на",
+   "dst": "mech_selectivity",
+   "desc": "Выбор и дозировка реагентов (например, сосновое масло, керосин) влияют на селективность флотации талька и других минералов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p270_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "приводит_к",
+   "dst": "kpi_recovery",
+   "desc": "Процесс основной флотации талькомагнезитового камня влияет на извлечение талька и других ценных компонентов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p270_0"
+   ]
+  },
+  {
+   "src": "pulp_ph",
+   "rel": "влияет_на",
+   "dst": "mech_selectivity",
+   "desc": "Изменение pH пульпы (например, снижение до 6,0—6,5) улучшает избирательность флотации талька.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p270_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "приводит_к",
+   "dst": "kpi_ni_loss",
+   "desc": "Процесс основной флотации влияет на потери никеля с хвостами.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p270_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "приводит_к",
+   "dst": "kpi_cu_loss",
+   "desc": "Процесс основной флотации влияет на потери меди с хвостами.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p270_0"
+   ]
+  },
+  {
+   "src": "reagent_regime",
+   "rel": "влияет_на",
+   "dst": "mech_surface",
+   "desc": "Реагенты-регуляторы изменяют гидратированность поверхности частиц, влияя на взаимодействие с собирателем или образуя гидрофильные/гидрофобные покрытия.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p129_0",
+    "geokniga-flotacionnye-metody-obogashchen_p187_0",
+    "geokniga-flotacionnye-metody-obogashchen_p164_0"
+   ]
+  },
+  {
+   "src": "reagent_regime",
+   "rel": "классифицируется_по",
+   "dst": "activation_depression",
+   "desc": "Регуляторы делятся на активаторы, подавители (депрессоры), регуляторы pH среды и пептизаторы по их конечному влиянию на флотацию.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p129_0"
+   ]
+  },
+  {
+   "src": "sodium_sulfide",
+   "rel": "выполняет_роль",
+   "dst": "activator_depressor",
+   "desc": "Сернистый натрий может действовать как активатор, так и подавитель в зависимости от условий флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p129_0"
+   ]
+  },
+  {
+   "src": "liquid_glass",
+   "rel": "выполняет_роль",
+   "dst": "activator_depressor",
+   "desc": "Жидкое стекло может действовать как активатор, так и подавитель в зависимости от условий флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p129_0"
+   ]
+  },
+  {
+   "src": "mech_overgrind",
+   "rel": "causes",
+   "dst": "mech_surface",
+   "desc": "Тонкие шламы в определённых условиях налипают на более крупные, образуя на их поверхности шламовые покрытия, которые препятствуют прилипанию к пузырьку воздуха и вызывают гидрофилизацию поверхности частицы, подавляя её флотацию.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p171_0"
+   ]
+  },
+  {
+   "src": "mech_overgrind",
+   "rel": "causes",
+   "dst": "flot_time",
+   "desc": "Пониженная скорость флотации шламовых частиц связана с их большой удельной поверхностью, для извлечения даже небольших весовых количеств шламов необходимо огромное количество высокодисперсных пузырьков.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p171_0"
+   ]
+  },
+  {
+   "src": "mech_overgrind",
+   "rel": "consumes",
+   "dst": "reagent_regime",
+   "desc": "Тонкие шламовые частицы, имеющие большую удельную поверхность, поглощают из пульпы гораздо большее количество реагентов, чем крупные частицы, отнимая у крупных частиц реагенты, необходимые для их флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p171_0"
+   ]
+  },
+  {
+   "src": "mech_overgrind",
+   "rel": "affects",
+   "dst": "kpi_ni_loss",
+   "desc": "Переизмельчение приводит к образованию тонких шламов, которые могут снижать эффективность флотации и увеличивать потери металлов с хвостами.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p171_0"
+   ]
+  },
+  {
+   "src": "mech_overgrind",
+   "rel": "affects",
+   "dst": "kpi_cu_loss",
+   "desc": "Переизмельчение приводит к образованию тонких шламов, которые могут снижать эффективность флотации и увеличивать потери металлов с хвостами.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p171_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "влияет_на",
+   "dst": "flot_time",
+   "desc": "Необходима оптимальная продолжительность флотации для расчётов числа флотационных машин и производительности фабрики.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p226_0"
+   ]
+  },
+  {
+   "src": "flotation_scav",
+   "rel": "влияет_на",
+   "dst": "flot_time",
+   "desc": "Необходима оптимальная продолжительность флотации для расчётов числа флотационных машин и производительности фабрики.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p226_0"
+   ]
+  },
+  {
+   "src": "flot_time",
+   "rel": "зависит_от",
+   "dst": "flot_machine",
+   "desc": "Продолжительность флотации зависит от количества и размера флотационных машин.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p226_0"
+   ]
+  },
+  {
+   "src": "flot_machine",
+   "rel": "влияет_на",
+   "dst": "flot_time",
+   "desc": "Размер и количество флотационных машин влияют на продолжительность флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p226_0"
+   ]
+  },
+  {
+   "src": "flot_machine",
+   "rel": "used_for",
+   "dst": "flotation_main",
+   "desc": "Флотационные машины используются для обогащения полезных ископаемых методом флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p230_0"
+   ]
+  },
+  {
+   "src": "reagent_feeder",
+   "rel": "used_for",
+   "dst": "reagent_regime",
+   "desc": "Реагентные питатели используются для точной и равномерной подачи реагентов при флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p230_0"
+   ]
+  },
+  {
+   "src": "contact_tank",
+   "rel": "used_for",
+   "dst": "thickening",
+   "desc": "Контактные чаны используются в процессе сгущения и контактирования при флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p230_0"
+   ]
+  },
+  {
+   "src": "pnt_open",
+   "rel": "flotation_mechanism",
+   "dst": "reagent_regime",
+   "desc": "Частично флотируются в присутствии одного реагента-пенообразователя.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p241_0"
+   ]
+  },
+  {
+   "src": "silicate",
+   "rel": "flotation_mechanism",
+   "dst": "reagent_regime",
+   "desc": "Под действием сернистого натрия и других сульфидизаторов покрываются сульфидной плёнкой и флотируются ксантогенатами.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p241_0"
+   ]
+  },
+  {
+   "src": "pyrite",
+   "rel": "flotation_mechanism",
+   "dst": "reagent_regime",
+   "desc": "Активно флотируются собирателями катионного типа и жирными кислотами.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p241_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "requires",
+   "dst": "contact_tank",
+   "desc": "Для проведения основной флотации необходимо использование контактного чана для добавления реагентов в пульпу.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p258_0"
+   ]
+  },
+  {
+   "src": "grinding",
+   "rel": "precedes",
+   "dst": "flotation_main",
+   "desc": "Процесс измельчения должен быть выполнен до начала основной флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p258_0"
+   ]
+  },
+  {
+   "src": "classification",
+   "rel": "part_of",
+   "dst": "grinding",
+   "desc": "Классификация является частью процесса измельчения.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p258_0"
+   ]
+  },
+  {
+   "src": "reagent_regime",
+   "rel": "influences",
+   "dst": "mech_surface",
+   "desc": "Реагентный режим влияет на гидрофобизацию поверхности минералов в процессе флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p258_0"
+   ]
+  },
+  {
+   "src": "pulp_density",
+   "rel": "affects",
+   "dst": "flot_time",
+   "desc": "Плотность пульпы влияет на время, необходимое для флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p258_0"
+   ]
+  },
+  {
+   "src": "reagent_apolar",
+   "rel": "influence",
+   "dst": "flotation_process",
+   "desc": "Аполярные реагенты оказывают сильное влияние на флотацию, являясь собирателями с капельным закреплением на поверхности флотируемых частиц.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p262_0"
+   ]
+  },
+  {
+   "src": "reagent_heteropolar",
+   "rel": "influence",
+   "dst": "flotation_process",
+   "desc": "Гетерополярные реагенты, как и аполярные, оказывают сильное влияние на флотацию.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p262_0"
+   ]
+  },
+  {
+   "src": "surfactant",
+   "rel": "action",
+   "dst": "flotation_mechanism",
+   "desc": "Поверхностно-активные вещества являются пенообразователями, обладают собирательным действием, пептизируют глинистые шламы и содействуют эмульгированию аполярных реагентов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p262_0"
+   ]
+  },
+  {
+   "src": "reagent_regulator",
+   "rel": "rare_use",
+   "dst": "flotation_coal",
+   "desc": "Реагенты-регуляторы применяются при флотации углей очень редко, несмотря на большую специфичность действия неорганических солей и органических коллоидов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p262_0"
+   ]
+  },
+  {
+   "src": "reagent_AAR1_AAR2",
+   "rel": "increased_activity",
+   "dst": "flotation_activity",
+   "desc": "Реагенты ААР-1 и ААР-2 обладают повышенной флотационной активностью, что позволяет снизить их расход на 20—30 % по сравнению с керосином.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p262_0"
+   ]
+  },
+  {
+   "src": "apolar_reagents",
+   "rel": "collecting_action",
+   "dst": "selective_wetting",
+   "desc": "Аполярные реагенты проявляют собирательное действие вследствие избирательного смачивания.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p263_0"
+   ]
+  },
+  {
+   "src": "heteropolar_reagents",
+   "rel": "foaming_action",
+   "dst": "oriented_adsorption",
+   "desc": "Поверхностно-активные реагенты из гетерополярных молекул проявляют сильное пенообразующее действие вследствие ориентированной адсорбции.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p263_0"
+   ]
+  },
+  {
+   "src": "inorganic_reagents",
+   "rel": "activation_action",
+   "dst": "optimal_conditions",
+   "desc": "Неорганические реагенты активируют флотацию в оптимальных условиях собирательного действия реагентов I и II типа.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p263_0"
+   ]
+  },
+  {
+   "src": "organic_colloids",
+   "rel": "regulating_action",
+   "dst": "pH_change",
+   "desc": "Органические коллоиды проявляют регулирующее действие, изменяя pH среды.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p263_0"
+   ]
+  },
+  {
+   "src": "flot_machine",
+   "rel": "operates_with",
+   "dst": "air_flow",
+   "desc": "Контроль работы флотационной машины по расходу воздуха",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p301_0"
+   ]
+  },
+  {
+   "src": "mech_surface",
+   "rel": "influenced_by",
+   "dst": "reagent_regime",
+   "desc": "Механизм действия аполярных реагентов при флотации частиц с гидрофобными и гидрофобизированными свойствами",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p301_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "uses",
+   "dst": "reagent_regime",
+   "desc": "В процессе основной флотации используются различные флотационные реагенты для закрепления на поверхности минералов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p302_1",
+    "geokniga-flotacionnye-metody-obogashchen_p299_0",
+    "geokniga-flotacionnye-metody-obogashchen_p276_0"
+   ]
+  },
+  {
+   "src": "reagent_regime",
+   "rel": "causes",
+   "dst": "mech_surface",
+   "desc": "Флотационные реагенты вызывают гидрофобизацию поверхности минералов, что способствует их флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p302_1"
+   ]
+  },
+  {
+   "src": "mineral_oil_flotation",
+   "rel": "is_based_on",
+   "dst": "selective_wetting",
+   "desc": "Масляная флотация основана на избирательном смачивании флотируемых минералов (сульфидов) органическими жидкостями (минеральными маслами).",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p10_0"
+   ]
+  },
+  {
+   "src": "sulfide_minerals",
+   "rel": "are_wetted_by",
+   "dst": "mineral_oils",
+   "desc": "Сульфидные минералы хорошо смачиваются минеральными маслами.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p10_0"
+   ]
+  },
+  {
+   "src": "non_sulfide_minerals",
+   "rel": "are_not_wetted_by",
+   "dst": "mineral_oils",
+   "desc": "Несульфидные минералы плохо смачиваются минеральными маслами.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p10_0"
+   ]
+  },
+  {
+   "src": "flotation_theory",
+   "rel": "influenced_by",
+   "dst": "surface_chemistry",
+   "desc": "Развитие теории флотации зависит от развития физической химии поверхностных явлений.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p15_0"
+   ]
+  },
+  {
+   "src": "langmuir_work",
+   "rel": "contributed_to",
+   "dst": "flotation_theory",
+   "desc": "Классические работы И. Лэнгмюра по молекулярной ориентации и строению адсорбционных слоев оказали большое влияние на становление теории флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p15_0"
+   ]
+  },
+  {
+   "src": "garkins_work",
+   "rel": "contributed_to",
+   "dst": "flotation_theory",
+   "desc": "Работы В. Д. Гаркинса по молекулярной ориентации и строению адсорбционных слоев оказали большое влияние на становление теории флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p15_0"
+   ]
+  },
+  {
+   "src": "gromek_work",
+   "rel": "contributed_to",
+   "dst": "flotation_theory",
+   "desc": "Работы И. С. Громека о смачивании и гистерезисе смачивания оказали влияние на развитие теории флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p15_0"
+   ]
+  },
+  {
+   "src": "gurvich_work",
+   "rel": "contributed_to",
+   "dst": "flotation_theory",
+   "desc": "Работы Л. П. Гурвича о гидрофильности и гидрофобности оказали влияние на развитие теории флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p15_0"
+   ]
+  },
+  {
+   "src": "surface_microrelief",
+   "rel": "causes",
+   "dst": "nonuniform_reagent_distribution",
+   "desc": "Неоднородность микрорельефа поверхности минерала приводит к неравномерному распределению флотационных реагентов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p43_0"
+   ]
+  },
+  {
+   "src": "mineral_surface_heterogeneity",
+   "rel": "affects",
+   "dst": "reagent_adsorption",
+   "desc": "Неоднородность свойств поверхности минералов влияет на адсорбцию флотационных реагентов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p43_0"
+   ]
+  },
+  {
+   "src": "electrochemical_heterogeneity",
+   "rel": "influences",
+   "dst": "interaction_with_reagents",
+   "desc": "Электрохимическая неоднородность поверхности сульфидов влияет на механизм их взаимодействия с флотационными реагентами.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p43_0"
+   ]
+  },
+  {
+   "src": "pine_oil",
+   "rel": "used_for",
+   "dst": "flotation_main",
+   "desc": "Сосновое масло применяется как реагент-пенообразователь при флотации руд и углей.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p128_0"
+   ]
+  },
+  {
+   "src": "opsb",
+   "rel": "used_for",
+   "dst": "flotation_main",
+   "desc": "ОПСБ применяется при флотации ряда медно-молибденовых руд благодаря сильному пенообразующему действию.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p128_0"
+   ]
+  },
+  {
+   "src": "op_7_op_10",
+   "rel": "used_for",
+   "dst": "flotation_main",
+   "desc": "Реагенты ОП-7 и ОП-10 применяются при флотации железных руд как хорошие диспергаторы собирателей.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p128_0"
+   ]
+  },
+  {
+   "src": "mibk",
+   "rel": "used_for",
+   "dst": "flotation_main",
+   "desc": "МИБК используется из-за его высокой технологической эффективности при флотации руд и углей.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p128_0"
+   ]
+  },
+  {
+   "src": "reagent_depressor",
+   "rel": "increases",
+   "dst": "mech_selectivity",
+   "desc": "Реагенты-подавители повышают избирательность (селективность) флотации при разделении минералов, обладающих близкими флотационными свойствами.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p130_0"
+   ]
+  },
+  {
+   "src": "reagent_depressor",
+   "rel": "affects",
+   "dst": "mech_surface",
+   "desc": "Реагенты-подавители могут влиять на гидрофобизацию поверхности минералов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p130_0"
+   ]
+  },
+  {
+   "src": "cyanide",
+   "rel": "reacts_with",
+   "dst": "copper_ions",
+   "desc": "Цианиды связывают ионы меди, находящиеся в растворе, что приводит к понижению концентрации меди в растворе.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p130_0"
+   ]
+  },
+  {
+   "src": "cyanide",
+   "rel": "leads_to",
+   "dst": "dissolution_of_collector",
+   "desc": "Добавление цианидов приводит к растворению ксантогената меди, находящегося на поверхности минерала.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p130_0"
+   ]
+  },
+  {
+   "src": "flot_time",
+   "rel": "влияет_на",
+   "dst": "mech_kinetics",
+   "desc": "Продолжительность флотации влияет на скорость процесса.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p177_0",
+    "geokniga-flotacionnye-metody-obogashchen_p164_0"
+   ]
+  },
+  {
+   "src": "reagent_regime",
+   "rel": "влияет_на",
+   "dst": "mech_kinetics",
+   "desc": "Концентрация реагентов в пульпе влияет на скорость флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p177_0"
+   ]
+  },
+  {
+   "src": "air_flow",
+   "rel": "влияет_на",
+   "dst": "mech_kinetics",
+   "desc": "Аэрация пульпы влияет на скорость флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p177_0",
+    "geokniga-flotacionnye-metody-obogashchen_p179_0"
+   ]
+  },
+  {
+   "src": "mech_kinetics",
+   "rel": "влияет_на",
+   "dst": "kpi_recovery",
+   "desc": "Скорость флотации влияет на извлечение металлов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p177_0",
+    "geokniga-flotacionnye-metody-obogashchen_p164_0"
+   ]
+  },
+  {
+   "src": "mech_selectivity",
+   "rel": "влияет_на",
+   "dst": "kpi_ni_loss",
+   "desc": "Селективность флотации влияет на потери никеля.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p177_0",
+    "geokniga-flotacionnye-metody-obogashchen_p164_0"
+   ]
+  },
+  {
+   "src": "mech_selectivity",
+   "rel": "влияет_на",
+   "dst": "kpi_cu_loss",
+   "desc": "Селективность флотации влияет на потери меди.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p177_0"
+   ]
+  },
+  {
+   "src": "flot_time",
+   "rel": "влияет_на",
+   "dst": "kpi_recovery",
+   "desc": "Оптимальная продолжительность пребывания пульпы в камерах флотационной машины влияет на извлечение флотируемых минералов в концентрат.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p179_0"
+   ]
+  },
+  {
+   "src": "flot_machine",
+   "rel": "определяет",
+   "dst": "mech_kinetics",
+   "desc": "Размеры камер и скорости потоков в флотационной машине влияют на кинетику флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p179_0"
+   ]
+  },
+  {
+   "src": "pulp_density",
+   "rel": "влияет_на",
+   "dst": "mech_kinetics",
+   "desc": "Плотность пульпы влияет на скорость флотации и продолжительность пребывания в камерах.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p179_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "влияет_на",
+   "dst": "kpi_ni_loss",
+   "desc": "Эффективность основной флотации влияет на потери никеля с хвостами.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p179_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "влияет_на",
+   "dst": "kpi_cu_loss",
+   "desc": "Эффективность основной флотации влияет на потери меди с хвостами.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p179_0"
+   ]
+  },
+  {
+   "src": "flotation_clean",
+   "rel": "requires",
+   "dst": "reagent_regime",
+   "desc": "Эффективность перечистных флотаций снижается при неполном разрушении поступающей пены, что можно регулировать изменением реагентного режима.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p180_0"
+   ]
+  },
+  {
+   "src": "flot_machine",
+   "rel": "produces",
+   "dst": "foam_structure",
+   "desc": "Флотомашина формирует различные типы флотационных пен в зависимости от условий флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p180_0"
+   ]
+  },
+  {
+   "src": "reagent_regime",
+   "rel": "affects",
+   "dst": "foam_stability",
+   "desc": "Изменения реагентного режима влияют на устойчивость жидких прослоек и прочность прилипания минеральных частиц к пузырькам.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p180_0"
+   ]
+  },
+  {
+   "src": "foam_stability",
+   "rel": "impacts",
+   "dst": "transportation_efficiency",
+   "desc": "Чрезмерно устойчивая пена затрудняет транспортирование, сгущение и фильтрацию пенных продуктов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p180_0"
+   ]
+  },
+  {
+   "src": "mech_surface",
+   "rel": "influences",
+   "dst": "particle_attachment",
+   "desc": "Гидрофобизация поверхности минеральных частиц влияет на их прилипание к пузырькам воздуха в пене.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p180_0"
+   ]
+  },
+  {
+   "src": "reagent_group_1",
+   "rel": "decreases",
+   "dst": "foam_stability",
+   "desc": "Избыточная концентрация реагентов первой группы снижает устойчивость пены.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p185_0"
+   ]
+  },
+  {
+   "src": "reagent_group_2",
+   "rel": "increases",
+   "dst": "foam_stability",
+   "desc": "Реагенты второй группы даже при больших расходах оказывают стабилизирующее действие на пену.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p185_0"
+   ]
+  },
+  {
+   "src": "reagent_group_3",
+   "rel": "destroys",
+   "dst": "foam",
+   "desc": "Реагенты третьей группы, такие как керосин, при больших расходах полностью уничтожают пену, полученную при помощи реагентов первой группы.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p185_0"
+   ]
+  },
+  {
+   "src": "reagent_group_3",
+   "rel": "displaces",
+   "dst": "reagent_group_1",
+   "desc": "Малорастворимые в воде реагенты-масла покрывают внутреннюю поверхность пузырьков, вытесняя из него гетерополярные молекулы пенообразователя первой группы.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p185_0"
+   ]
+  },
+  {
+   "src": "reagent_effect_on_stability",
+   "rel": "depends_on",
+   "dst": "mineral_particle_attachment",
+   "desc": "Действие реагентов на устойчивость флотационной пены во многом зависит от того, как они изменяют прочность прикрепления минеральных частиц к пузырькам.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p185_0"
+   ]
+  },
+  {
+   "src": "water_feed",
+   "rel": "усиливает",
+   "dst": "mech_surface",
+   "desc": "Орошение поверхности пены водой усиливает нисходящее движение частиц пустой породы в пене.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p187_0"
+   ]
+  },
+  {
+   "src": "reagent_depressant",
+   "rel": "улучшает",
+   "dst": "flotation_clean",
+   "desc": "Добавление реагента-подавителя к воде, используемой для орошения пены, облегчает отделение частиц пустой породы и улучшает качество перечистной флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p187_0"
+   ]
+  },
+  {
+   "src": "flot_machine",
+   "rel": "используется_для",
+   "dst": "destruction_foam",
+   "desc": "В флотационных машинах применяются механические и физико-химические приемы для разрушения пены.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p187_0"
+   ]
+  },
+  {
+   "src": "slimes_presence",
+   "rel": "влияет_на",
+   "dst": "foam_stability",
+   "desc": "Присутствие в пульпе тонких шламов чрезмерно увеличивает устойчивость пены.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p187_0"
+   ]
+  },
+  {
+   "src": "strong_water_jet",
+   "rel": "способствует",
+   "dst": "destruction_foam",
+   "desc": "Основным механическим приемом разрушения пены является применение сильной струи воды.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p187_0"
+   ]
+  },
+  {
+   "src": "flot_time",
+   "rel": "влияет на",
+   "dst": "kpi_recovery",
+   "desc": "При избыточно большой нагрузке продолжительность флотации будет меньше необходимого, что приведёт к низкому извлечению полезного ископаемого в концентрат.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p250_0"
+   ]
+  },
+  {
+   "src": "pulp_density",
+   "rel": "влияет на",
+   "dst": "flot_time",
+   "desc": "Без контроля плотности пульпы нельзя регулировать продолжительность флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p250_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "влияет на",
+   "dst": "kpi_cu_loss",
+   "desc": "В основной флотации необходимо стремиться к тому, чтобы всё необходимое количество пены было снято до последней камеры, что обеспечивает хорошее качество хвостов и минимизирует потери меди.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p250_0"
+   ]
+  },
+  {
+   "src": "flotation_clean",
+   "rel": "влияет на",
+   "dst": "kpi_cu_loss",
+   "desc": "В перечистной флотации поддерживают относительно толстый слой пены для получения более богатых концентратов, что способствует снижению потерь меди с хвостами.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p250_0"
+   ]
+  },
+  {
+   "src": "reagent_regime",
+   "rel": "влияет на",
+   "dst": "mech_surface",
+   "desc": "Реагентный режим влияет на гидрофобизацию поверхности минералов, что важно для процесса флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p250_0"
+   ]
+  },
+  {
+   "src": "water_feed",
+   "rel": "влияет на",
+   "dst": "flotation_main",
+   "desc": "Подача воды влияет на процесс основной флотации, так как оборотное водоснабжение может содержать примеси, ухудшающие флотацию.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p250_0"
+   ]
+  },
+  {
+   "src": "intermediate_product",
+   "rel": "impacts",
+   "dst": "pulp_density",
+   "desc": "Промежуточные продукты влияют на изменение плотности пульпы в операциях флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p256_0"
+   ]
+  },
+  {
+   "src": "pulp_density",
+   "rel": "must_be",
+   "dst": "optimal_value",
+   "desc": "Плотность пульпы должна быть близкой к оптимальной для эффективной флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p256_0"
+   ]
+  },
+  {
+   "src": "flot_machine",
+   "rel": "provides",
+   "dst": "optimal_conditions",
+   "desc": "Флотационные машины обеспечивают оптимальные условия для проведения операций флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p256_0"
+   ]
+  },
+  {
+   "src": "hydrophobicity",
+   "rel": "позволяет",
+   "dst": "simple_reagent_regime",
+   "desc": "Высокая природная гидрофобность минералов позволяет осуществлять флотацию при сравнительно простом реагентном режиме.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p260_0"
+   ]
+  },
+  {
+   "src": "adhesion_strength",
+   "rel": "позволяет",
+   "dst": "flotation_of_large_particles",
+   "desc": "Большая прочность прилипания аполярных несульфидных минералов к воздушным пузырькам наряду с небольшой плотностью позволяет флотировать сравнительно крупные их частицы.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p260_0"
+   ]
+  },
+  {
+   "src": "slime_formation",
+   "rel": "осложняет",
+   "dst": "flotation",
+   "desc": "Образование значительного количества тонких шламов при добыче и измельчении может в отдельных случаях осложнять флотацию.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p260_0"
+   ]
+  },
+  {
+   "src": "reagent_regime",
+   "rel": "обеспечивает",
+   "dst": "flotation_main",
+   "desc": "Регуляторы флотации, такие как пирофосфат натрия, сода с жидким стеклом, обеспечивают эффективное извлечение серы.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p269_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "приводит к",
+   "dst": "kpi_recovery",
+   "desc": "Основная флотация позволяет достичь высокого извлечения серы (до 93%).",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p269_0"
+   ]
+  },
+  {
+   "src": "classification",
+   "rel": "позволяет",
+   "dst": "separation_by_size",
+   "desc": "Хвосты флотации классифицируются по крупности, что позволяет эффективно управлять процессом.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p269_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "uses",
+   "dst": "sulfhydryl_collectors",
+   "desc": "При флотации смешанных руд используется первоначальная флотация сульфидов сульфгидрильными собирателями.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p296_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "followed_by",
+   "dst": "sulfidization",
+   "desc": "После основной флотации сульфидов проводится сульфидизация хвостов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p296_0"
+   ]
+  },
+  {
+   "src": "combined_method",
+   "rel": "includes",
+   "dst": "flotation",
+   "desc": "Комбинированный флотационно-гидрометаллургический метод включает в себя флотацию.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p296_0"
+   ]
+  },
+  {
+   "src": "combined_method",
+   "rel": "includes",
+   "dst": "hydrometallurgy",
+   "desc": "Комбинированный флотационно-гидрометаллургический метод включает в себя гидрометаллургические процессы.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p296_0"
+   ]
+  },
+  {
+   "src": "crushed_ore",
+   "rel": "undergoes",
+   "dst": "leaching",
+   "desc": "Измельчённая руда подвергается сернокислотному выщелачиванию.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p296_0"
+   ]
+  },
+  {
+   "src": "leaching",
+   "rel": "results_in",
+   "dst": "copper_solution",
+   "desc": "В результате выщелачивания медь из окисленных минералов переходит в раствор.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p296_0"
+   ]
+  },
+  {
+   "src": "reagent_regime",
+   "rel": "affects",
+   "dst": "flotation_selectivity",
+   "desc": "Выбор реагентов влияет на селективность флотации, позволяя подавлять флотацию нежелательных минералов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p299_0"
+   ]
+  },
+  {
+   "src": "liquid_glass",
+   "rel": "activates",
+   "dst": "apathy_flotation",
+   "desc": "Жидкое стекло активирует флотацию апатита при небольших расходах, подавляя флотацию остальных минералов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p299_0"
+   ]
+  },
+  {
+   "src": "phosphoric_acid_salts",
+   "rel": "suppresses",
+   "dst": "carbonate_flotation",
+   "desc": "Фосфорнокислые соли в щелочной среде подавляют флотацию карбонатов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p299_0"
+   ]
+  },
+  {
+   "src": "reverse_flotation",
+   "rel": "produces",
+   "dst": "nepheline_concentrate",
+   "desc": "Обратная флотация жирнокислотным собирателем апатитовых хвостов позволяет выделить нефелиновый концентрат.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p299_0"
+   ]
+  },
+  {
+   "src": "direct_flotation",
+   "rel": "produces",
+   "dst": "phosphate_concentrate",
+   "desc": "Прямая флотация фосфоритов собирателями анионного типа позволяет получить фосфатный концентрат.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p299_0"
+   ]
+  },
+  {
+   "src": "reagent_regime",
+   "rel": "adsorption",
+   "dst": "mineral_surface",
+   "desc": "Реагенты закрепляются на поверхности минералов путем адсорбции.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p49_0"
+   ]
+  },
+  {
+   "src": "reagent_regime",
+   "rel": "chemical_reaction",
+   "dst": "mineral_surface",
+   "desc": "Гетерогенная химическая реакция происходит на поверхности минералов при взаимодействии с реагентами.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p49_0"
+   ]
+  },
+  {
+   "src": "mineral_surface",
+   "rel": "wetting_angle",
+   "dst": "reagent_effect",
+   "desc": "Измерение краевого угла смачивания минерала до и после воздействия реагента позволяет установить воздействие реагента на поверхность минерала.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p49_0"
+   ]
+  },
+  {
+   "src": "adsorbed_reagent",
+   "rel": "chemical_extraction",
+   "dst": "mineral_surface",
+   "desc": "Закрепившийся на минеральной поверхности реагент может быть химически выделен и количественно определен.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p49_0"
+   ]
+  },
+  {
+   "src": "reagent_regime",
+   "rel": "increases",
+   "dst": "kpi_recovery",
+   "desc": "Применение сочетаний двух собирателей увеличивает извлечение минерала в пенный продукт.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p95_0"
+   ]
+  },
+  {
+   "src": "reagent_regime",
+   "rel": "improves",
+   "dst": "mech_kinetics",
+   "desc": "Сочетание собирателей повышает скорость флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p95_0"
+   ]
+  },
+  {
+   "src": "reagent_regime",
+   "rel": "reduces",
+   "dst": "reagent_consumption",
+   "desc": "Использование сочетаний собирателей снижает расход реагентов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p95_0"
+   ]
+  },
+  {
+   "src": "ethyloxanthate_amyl_combination",
+   "rel": "enhances",
+   "dst": "galena_flotation",
+   "desc": "Сочетания этилового и амилового ксантогенатов при флотации галенита дают более высокое извлечение, чем каждый ксантогенат в отдельности.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p95_0"
+   ]
+  },
+  {
+   "src": "reagent_concentration",
+   "rel": "влияет_на",
+   "dst": "flotation_speed",
+   "desc": "Повышение концентрации собирателя в два раза для частиц крупностью -250+150 мкм привело к ускорению формирования адсорбционного слоя в 15 • 103 раз.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p102_0"
+   ]
+  },
+  {
+   "src": "particle_size",
+   "rel": "влияет_на",
+   "dst": "interaction_speed",
+   "desc": "Скорость взаимодействия минеральных частиц с собирателем зависит от крупности частиц.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p102_0"
+   ]
+  },
+  {
+   "src": "separate_conditioning",
+   "rel": "улучшает",
+   "dst": "flotation_performance",
+   "desc": "Метод раздельного кондиционирования позволяет заметно улучшить все основные показатели флотации при одновременном снижении расхода собирателя.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p102_0"
+   ]
+  },
+  {
+   "src": "reagent_concentration",
+   "rel": "влияет_на",
+   "dst": "adsorption_layer_formation",
+   "desc": "Высокая концентрация собирателя для крупных частиц и умеренная для мелких могут значительно интенсифицировать процесс флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p102_0"
+   ]
+  },
+  {
+   "src": "particle_activity",
+   "rel": "отличается",
+   "dst": "particle_reactivity",
+   "desc": "Активность частиц минерала одинаковой крупности может отличаться у разных частиц.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p102_0"
+   ]
+  },
+  {
+   "src": "particle_preparation",
+   "rel": "влияет_на",
+   "dst": "flotation_efficiency",
+   "desc": "Достаточно подготовленные к флотации воздействием собирателя частицы практически сразу же переходят в пену.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p102_0"
+   ]
+  },
+  {
+   "src": "pH_value",
+   "rel": "влияет_на",
+   "dst": "reagent_deactivation",
+   "desc": "Изменение pH среды влияет на гидролиз реагентов-подавителей и их деактивацию.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p133_0"
+   ]
+  },
+  {
+   "src": "pH_value",
+   "rel": "влияет_на",
+   "dst": "flotation_suppression",
+   "desc": "Изменение pH среды может подавлять флотацию минералов за счет вытеснения собирателя с их поверхности.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p133_0"
+   ]
+  },
+  {
+   "src": "hydroxide_ions",
+   "rel": "подавляют",
+   "dst": "flotation_process",
+   "desc": "Гидроксильные ионы могут подавлять флотацию минералов, особенно железосодержащих.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p133_0"
+   ]
+  },
+  {
+   "src": "pH_critical_value",
+   "rel": "определяет",
+   "dst": "flotation_suppression",
+   "desc": "При достижении критического значения pH происходит подавление флотации сульфидных минералов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p133_0"
+   ]
+  },
+  {
+   "src": "cyanide_sodium",
+   "rel": "подвергается",
+   "dst": "hydrolysis",
+   "desc": "Цианистый натрий подвергается гидролизу в воде, что влияет на флотацию.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p133_0"
+   ]
+  },
+  {
+   "src": "collector_concentration",
+   "rel": "взаимодействует_с",
+   "dst": "pH_value",
+   "desc": "Концентрация собирателя взаимодействует с pH среды, определяя эффективность флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p133_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "enables",
+   "dst": "mech_liberation",
+   "desc": "При флотации крупновкрапленных руд достаточно полное разделение сростков может произойти при относительно крупном измельчении руды.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p166_0"
+   ]
+  },
+  {
+   "src": "grinding",
+   "rel": "affects",
+   "dst": "grind_fineness",
+   "desc": "Руду приходится измельчать тоньше, потому что крупные частицы не могут быть подняты пузырьками на поверхность пульпы.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p166_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "improves",
+   "dst": "kpi_recovery",
+   "desc": "Флотация более крупных частиц в отдельных случаях имеет преимущества, так как значительно повышается производительность отделений измельчения, сгущения, фильтрации и сушки.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p166_0"
+   ]
+  },
+  {
+   "src": "grind_fineness",
+   "rel": "impacts",
+   "dst": "flot_time",
+   "desc": "Повышение верхнего предела крупности измельчаемых зёрен сокращает время флотации и повышает производительность шаровых мельниц.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p166_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "influences",
+   "dst": "kpi_ni_loss",
+   "desc": "Эффективная флотация крупных частиц может снизить потери никеля с хвостами.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p166_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "influences",
+   "dst": "kpi_cu_loss",
+   "desc": "Эффективная флотация крупных частиц может снизить потери меди с хвостами.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p166_0"
+   ]
+  },
+  {
+   "src": "flot_machine",
+   "rel": "влияет_на",
+   "dst": "air_flow",
+   "desc": "Тип флотационной машины (механическая или пневматическая) определяет оптимальный расход пенообразователя и диаметр пузырьков.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p200_0"
+   ]
+  },
+  {
+   "src": "air_flow",
+   "rel": "влияет_на",
+   "dst": "flot_machine_productivity",
+   "desc": "Производительность флотационной машины находится в прямой зависимости от объема аэрированной зоны и количества воздуха, поступающего в пульпу.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p200_0"
+   ]
+  },
+  {
+   "src": "air_flow",
+   "rel": "влияет_на",
+   "dst": "bubble_size",
+   "desc": "Оптимальный расход пенообразователя и воздуха влияет на диаметр пузырьков во флотационных машинах.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p200_0"
+   ]
+  },
+  {
+   "src": "flot_machine",
+   "rel": "has_feature",
+   "dst": "compartment_design",
+   "desc": "Длинная камера флотационной машины разделена перегородками, не доходящими до дна и уровня пульпы.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p204_0"
+   ]
+  },
+  {
+   "src": "flot_machine",
+   "rel": "contains",
+   "dst": "aeration_device",
+   "desc": "В отсеках флотационной машины находятся аэрирующие устройства.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p204_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "uses",
+   "dst": "flot_machine",
+   "desc": "Основная флотация проводится с использованием флотационных машин.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p204_0"
+   ]
+  },
+  {
+   "src": "flot_machine",
+   "rel": "processes",
+   "dst": "coarsely_ground_pulp",
+   "desc": "Флотационная машина обрабатывает грубоизмельчённую пульпу.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p204_0"
+   ]
+  },
+  {
+   "src": "grinding",
+   "rel": "produces",
+   "dst": "coarsely_ground_pulp",
+   "desc": "Процесс измельчения производит грубоизмельчённую пульпу.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p204_0"
+   ]
+  },
+  {
+   "src": "classification",
+   "rel": "separates",
+   "dst": "free_mineral_grains",
+   "desc": "Процесс классификации выделяет свободные зёрна минералов из цикла измельчения.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p204_0"
+   ]
+  },
+  {
+   "src": "mineral_composition",
+   "rel": "влияет_на",
+   "dst": "flotation_properties",
+   "desc": "Минеральный состав руды определяет её флотационные свойства.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p238_0"
+   ]
+  },
+  {
+   "src": "mineral_intergrowth",
+   "rel": "влияет_на",
+   "dst": "flotation_efficiency",
+   "desc": "Характер срастания минералов влияет на эффективность флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p238_0"
+   ]
+  },
+  {
+   "src": "reagent_regime",
+   "rel": "влияет_на",
+   "dst": "flotation_process",
+   "desc": "Реагентный режим влияет на процесс флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p238_0"
+   ]
+  },
+  {
+   "src": "granulometric_characteristics",
+   "rel": "влияет_на",
+   "dst": "flotation_results",
+   "desc": "Гранулометрическая характеристика твёрдой фазы влияет на результаты флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p238_0"
+   ]
+  },
+  {
+   "src": "pulp_density",
+   "rel": "влияет_на",
+   "dst": "flotation_process",
+   "desc": "Плотность пульпы влияет на процесс флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p238_0"
+   ]
+  },
+  {
+   "src": "flotation_machine_design",
+   "rel": "влияет_на",
+   "dst": "flotation_process",
+   "desc": "Конструкция флотационной машины влияет на процесс флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p238_0"
+   ]
+  },
+  {
+   "src": "grinding",
+   "rel": "causes",
+   "dst": "mech_overgrind",
+   "desc": "Слишком тонкое измельчение приводит к образованию тонких шламов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p243_0"
+   ]
+  },
+  {
+   "src": "grinding",
+   "rel": "influences",
+   "dst": "flotation_properties",
+   "desc": "Оптимальная тонкость измельчения влияет на флотационные свойства сростков.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p243_0"
+   ]
+  },
+  {
+   "src": "grind_fineness",
+   "rel": "impacts",
+   "dst": "kpi_recovery",
+   "desc": "Оптимальная тонкость измельчения способствует повышению извлечения металлов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p243_0"
+   ]
+  },
+  {
+   "src": "reagent_regime",
+   "rel": "позволяет",
+   "dst": "water_recycling",
+   "desc": "Использование мягких жирных кислот в качестве собирателей позволяет применять оборотную воду, содержащую соли.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p251_0"
+   ]
+  },
+  {
+   "src": "water_recycling",
+   "rel": "снижает",
+   "dst": "environmental_impact",
+   "desc": "Применение оборотного водоснабжения снижает загрязнение окружающей среды.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p251_0"
+   ]
+  },
+  {
+   "src": "factory_productivity",
+   "rel": "влияет",
+   "dst": "processing_cost",
+   "desc": "Чем выше производительность фабрики, тем ниже себестоимость обогащения 1 тонны сырья.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p251_0"
+   ]
+  },
+  {
+   "src": "flotation",
+   "rel": "is_effective_method",
+   "dst": "coal_enrichment",
+   "desc": "Флотация является эффективным методом обогащения мелких классов каменных углей.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p261_0"
+   ]
+  },
+  {
+   "src": "mechanization_of_mining",
+   "rel": "increases",
+   "dst": "content_of_small_classes",
+   "desc": "Механизация добычи угля привела к увеличению содержания в нем мелких классов крупности до 50%.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p261_0"
+   ]
+  },
+  {
+   "src": "flotation_properties",
+   "rel": "depend_on",
+   "dst": "mineralogical_composition",
+   "desc": "Флотационные свойства углей зависят от их минералого-петрографического состава.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p261_0"
+   ]
+  },
+  {
+   "src": "flot_machine",
+   "rel": "is_used_for",
+   "dst": "flotation_main",
+   "desc": "Флотационные машины используются для проведения основной флотации углей.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p266_0"
+   ]
+  },
+  {
+   "src": "flot_machine_fppm_20",
+   "rel": "replaces",
+   "dst": "flot_machine_fmu_50_and_mfu2_63",
+   "desc": "Пневматическая машина ФППМ-20 заменяет по производительности две машины ФМУ-50 и одну МФУ2-63.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p266_0"
+   ]
+  },
+  {
+   "src": "flotation_unit",
+   "rel": "part_of",
+   "dst": "treatment_plant",
+   "desc": "Флотационная установка является частью обогатительной фабрики.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p266_0"
+   ]
+  },
+  {
+   "src": "reagent_regime",
+   "rel": "улучшает",
+   "dst": "flot_time",
+   "desc": "Добавление реагента ОП-Ю улучшает свойства соснового масла, что позволяет сократить время флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p273_0"
+   ]
+  },
+  {
+   "src": "reagent_regime",
+   "rel": "повышает",
+   "dst": "kpi_recovery",
+   "desc": "Совместное применение этилового и амилового ксантогенатов повысило извлечение золота на 0,5%.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p273_0"
+   ]
+  },
+  {
+   "src": "air_flow",
+   "rel": "уменьшает",
+   "dst": "mech_overgrind",
+   "desc": "Оптимизация аэрации пульпы во флотационных машинах помогает уменьшить переизмельчение золота и улучшить флотацию его крупных частиц.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p273_0"
+   ]
+  },
+  {
+   "src": "reagent_regime",
+   "rel": "used_for",
+   "dst": "mech_selectivity",
+   "desc": "Для повышения избирательности флотации применяют смесь жидкого стекла с солями поливалентных металлов и органические реагенты-регуляторы.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p298_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "uses",
+   "dst": "ксантогенаты",
+   "desc": "При наличии сульфидных минералов (чаще всего пирита) их выделяют в пенный продукт в первых камерах с помощью ксантогенатов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p298_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "uses",
+   "dst": "сульфидизация",
+   "desc": "Иногда перед основной флотацией проводится предварительная сульфидизация.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p298_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "uses",
+   "dst": "oleic_acid",
+   "desc": "При флотации флюоритовых руд применяется кондиционирование олеиновой кислоты.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p298_0"
+   ]
+  },
+  {
+   "src": "oleic_acid",
+   "rel": "combined_with",
+   "dst": "dispersants",
+   "desc": "Олеиновая кислота используется в присутствии реагентов-диспергаторов высокоповерхностно-активных веществ.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p298_0"
+   ]
+  },
+  {
+   "src": "oleic_acid",
+   "rel": "allows",
+   "dst": "lower_temperature",
+   "desc": "Использование олеиновой кислоты позволяет вести флотацию при пониженной температуре.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p298_0"
+   ]
+  },
+  {
+   "src": "gravity_sep",
+   "rel": "применяется_для",
+   "dst": "извлечение_крупного_золота",
+   "desc": "Гравитационные методы обогащения применяются для извлечения крупного золота перед флотацией и цианированием.",
+   "sources": [
+    "geokniga-metallurgiya-blagorodnyh-metall_p25_0"
+   ]
+  },
+  {
+   "src": "измельчение_и_дробление",
+   "rel": "приводит_к",
+   "dst": "затирание_крупного_золота",
+   "desc": "В цикле дробление – измельчение крупные частицы золота затираются, в них запрессовываются другие минералы, что снижает их флотационную активность.",
+   "sources": [
+    "geokniga-metallurgiya-blagorodnyh-metall_p25_0"
+   ]
+  },
+  {
+   "src": "крупное_золото",
+   "rel": "имеет",
+   "dst": "низкую_флотационную_активность",
+   "desc": "Крупные частицы золота в цикле дробление – измельчение затираются, в них запрессовываются другие минералы, в результате падает их флотационная активность.",
+   "sources": [
+    "geokniga-metallurgiya-blagorodnyh-metall_p25_0"
+   ]
+  },
+  {
+   "src": "гравитационное_обогащение",
+   "rel": "основано_на",
+   "dst": "различие_плотности_минералов",
+   "desc": "Гравитационные методы обогащения основаны на различии скорости движения минеральных частиц различной массы в воде и применимы для обогащения руд, имеющих достаточную разницу в плотности разделяемых минералов.",
+   "sources": [
+    "geokniga-metallurgiya-blagorodnyh-metall_p25_0"
+   ]
+  },
+  {
+   "src": "particle_size",
+   "rel": "влияет_на",
+   "dst": "surface_properties",
+   "desc": "Чем меньше размер частиц, тем больше их удельная поверхность и тем большее значение имеют поверхностные свойства.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p4_0"
+   ]
+  },
+  {
+   "src": "flotation_system",
+   "rel": "характеризуется_как",
+   "dst": "heterogeneous_system",
+   "desc": "Флотационные системы характеризуются как гетерогенные, дисперсные, многофазные и многокомпонентные.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p4_0"
+   ]
+  },
+  {
+   "src": "mineral_particles",
+   "rel": "взаимодействуют_с",
+   "dst": "gas_bubbles",
+   "desc": "Минеральные частицы способны прилипать к газовым пузырькам, вводимым в суспензию.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p4_0"
+   ]
+  },
+  {
+   "src": "flotation_process",
+   "rel": "включает",
+   "dst": "reagents",
+   "desc": "В процессе флотации используются водорастворимые или труднорастворимые реагенты.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p4_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "depends_on",
+   "dst": "mech_surface",
+   "desc": "Успех флотации зависит от гидрофобности минералов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p9_0"
+   ]
+  },
+  {
+   "src": "mech_surface",
+   "rel": "enhanced_by",
+   "dst": "flotation_reagents",
+   "desc": "Различия в смачиваемости минералов усиливаются применением флотационных реагентов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p9_0"
+   ]
+  },
+  {
+   "src": "flotation_reagents",
+   "rel": "affect",
+   "dst": "mineral_surface",
+   "desc": "Флотационные реагенты воздействуют на поверхность минерала, не затрагивая его объёмных свойств.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p9_0"
+   ]
+  },
+  {
+   "src": "grinding",
+   "rel": "improves",
+   "dst": "mech_liberation",
+   "desc": "Тонкий помол улучшает раскрытие сростков минералов, что важно для флотации тонковкрапленных руд.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p9_0"
+   ]
+  },
+  {
+   "src": "flotation",
+   "rel": "leads_to",
+   "dst": "kpi_recovery",
+   "desc": "Флотация позволяет эффективно извлекать цветные и редкие металлы.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p9_0"
+   ]
+  },
+  {
+   "src": "air_flow",
+   "rel": "влияет_на",
+   "dst": "mech_surface",
+   "desc": "Хорошая аэрированность пульпы способствует гидрофобизации поверхности минералов, что необходимо для флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p164_0"
+   ]
+  },
+  {
+   "src": "mech_surface",
+   "rel": "влияет_на",
+   "dst": "flotation_main",
+   "desc": "Гидрофобизация поверхности минералов влияет на эффективность основной флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p164_0"
+   ]
+  },
+  {
+   "src": "mech_kinetics",
+   "rel": "влияет",
+   "dst": "flotation_process",
+   "desc": "Кинетика флотации влияет на скорость извлечения флотируемого минерала в пену.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p178_0"
+   ]
+  },
+  {
+   "src": "particle_heterogeneity",
+   "rel": "влияет",
+   "dst": "flotation_efficiency",
+   "desc": "Неоднородность частиц по флотационным свойствам влияет на эффективность флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p178_0"
+   ]
+  },
+  {
+   "src": "floculation",
+   "rel": "влияет",
+   "dst": "flotation_selectivity",
+   "desc": "Отсутствие флокуляции частиц, особенно неселективной, влияет на селективность флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p178_0"
+   ]
+  },
+  {
+   "src": "slimes_effect",
+   "rel": "влияет",
+   "dst": "flotation_efficiency",
+   "desc": "Тонкие шламы могут оказывать отрицательное влияние на эффективность флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p178_0"
+   ]
+  },
+  {
+   "src": "pulp_movement",
+   "rel": "влияет",
+   "dst": "flotation_efficiency",
+   "desc": "Перемещение пульпы вдоль флотационной машины, сопровождающееся перемешиванием, влияет на эффективность флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p178_0"
+   ]
+  },
+  {
+   "src": "pH_change",
+   "rel": "влияет_на",
+   "dst": "selective_flotation",
+   "desc": "Изменение pH позволяет стадийно осаждать определённые группы ионов и проводить их селективную флотацию.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p189_0"
+   ]
+  },
+  {
+   "src": "foam_fractionation",
+   "rel": "применяется_для",
+   "dst": "wastewater_treatment",
+   "desc": "Пенное фракционирование используется для очистки сточных вод от органических веществ, которые не поддаются биологическому разрушению.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p189_0"
+   ]
+  },
+  {
+   "src": "flot_extraction",
+   "rel": "осуществляет",
+   "dst": "concentration_hydrophobic",
+   "desc": "Флотоэкстракция концентрирует гидрофобные соединения в слое органической жидкости, покрывающем поверхность аэрируемого водного раствора.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p189_0"
+   ]
+  },
+  {
+   "src": "electroflotation",
+   "rel": "используется_для",
+   "dst": "enrichment_fines",
+   "desc": "Электрофлотация применяется для обогащения тонковкрапленных руд и очистки сточных вод.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p189_0"
+   ]
+  },
+  {
+   "src": "reagent_regime",
+   "rel": "used_in",
+   "dst": "flotation_main",
+   "desc": "В процессе флотации используются различные реагенты, такие как ксантогенаты и сернистый натрий.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p235_0"
+   ]
+  },
+  {
+   "src": "reagent_regime",
+   "rel": "delivered_by",
+   "dst": "feeder",
+   "desc": "Питатели используются для подачи реагентов в процесс флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p235_0"
+   ]
+  },
+  {
+   "src": "feeder",
+   "rel": "regulates",
+   "dst": "reagent_flow",
+   "desc": "Питатели позволяют регулировать расход реагентов в процессе флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p235_0"
+   ]
+  },
+  {
+   "src": "pulp_density",
+   "rel": "влияет_на",
+   "dst": "flot_time",
+   "desc": "С увеличением плотности пульпы при постоянном объёме флотационных машин и производительности фабрики продолжительность нахождения пульпы в этих машинах возрастает.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p245_0"
+   ]
+  },
+  {
+   "src": "pulp_density",
+   "rel": "влияет_на",
+   "dst": "reagent_concentration",
+   "desc": "Объёмная концентрация реагентов увеличивается с увеличением плотности пульпы при сохранении постоянного расхода реагента, отнесённого к единице веса флотируемого материала.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p245_0"
+   ]
+  },
+  {
+   "src": "pulp_density",
+   "rel": "влияет_на",
+   "dst": "kpi_recovery",
+   "desc": "В ряде случаев повышение плотности пульпы увеличивает извлечение металлов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p245_0"
+   ]
+  },
+  {
+   "src": "pulp_density",
+   "rel": "влияет_на",
+   "dst": "air_flow",
+   "desc": "При чрезмерном увеличении плотности пульпы резко ухудшается аэрация пульпы.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p245_0"
+   ]
+  },
+  {
+   "src": "pulp_density",
+   "rel": "влияет_на",
+   "dst": "flotation_efficiency",
+   "desc": "При чрезмерном увеличении плотности пульпы ухудшается флотация крупных частиц.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p245_0"
+   ]
+  },
+  {
+   "src": "pulp_density",
+   "rel": "влияет_на",
+   "dst": "concentrate_quality",
+   "desc": "Повышение плотности пульпы может привести к ухудшению качества концентрата из-за более интенсивной флотации тонких частиц пустой породы.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p245_0"
+   ]
+  },
+  {
+   "src": "grinding",
+   "rel": "causes",
+   "dst": "oxygen_concentration_decrease",
+   "desc": "При измельчении руды происходит резкое снижение концентрации кислорода в пульпе.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p248_1"
+   ]
+  },
+  {
+   "src": "classification",
+   "rel": "causes",
+   "dst": "oxygen_concentration_decrease",
+   "desc": "При классификации руды происходит резкое снижение концентрации кислорода в пульпе.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p248_1"
+   ]
+  },
+  {
+   "src": "reagent_regime",
+   "rel": "defines",
+   "dst": "flotation_efficiency",
+   "desc": "Реагентный режим определяет эффективность флотации, включая ассортимент реагентов, их расход и порядок подачи.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p248_1"
+   ]
+  },
+  {
+   "src": "bitumen_content",
+   "rel": "negatively_impacts",
+   "dst": "flotation_efficiency",
+   "desc": "Пустая порода, содержащая значительное количество битумов, обладает некоторой флотационной активностью и переходит частично в концентрат, ухудшая флотацию.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p268_1"
+   ]
+  },
+  {
+   "src": "clay_slimes",
+   "rel": "negatively_impacts",
+   "dst": "flotation_efficiency",
+   "desc": "Присутствие большого количества тонкодисперсных глинистых шламов ухудшает флотацию.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p268_1"
+   ]
+  },
+  {
+   "src": "gypsum",
+   "rel": "negatively_impacts",
+   "dst": "flotation_efficiency",
+   "desc": "Наличие легко растворяющегося в воде гипса ухудшает флотацию.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p268_1"
+   ]
+  },
+  {
+   "src": "reagent_combination",
+   "rel": "improves",
+   "dst": "flotation_efficiency",
+   "desc": "При флотации серных руд применяют сочетание реагентов с аполярными молекулами и реагентов с гетерополярными молекулами для улучшения флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p268_1"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "позволяет",
+   "dst": "primary_concentration",
+   "desc": "Флотация применяется для первичной концентрации золота перед цианированием или плавкой.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p271_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "позволяет",
+   "dst": "complex_use",
+   "desc": "Флотация позволяет извлекать из руд не только золото, но и другие ценные компоненты, такие как медь, серебро, свинец, барит и др.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p271_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "удаляет",
+   "dst": "harmful_components",
+   "desc": "Флотация удаляет из руды компоненты, вредные для последующего цианирования, такие как медные и сурьмяные минералы, графитистые сланцы и др.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p271_0"
+   ]
+  },
+  {
+   "src": "reagent_regime",
+   "rel": "влияет",
+   "dst": "flotability",
+   "desc": "Флотируемость чистого золота ксантогенатом сильно зависит от ионного состава жидкой фазы пульпы, в которой присутствуют цианид, сернистый натрий, щелочи, медный купорос и др.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p271_0"
+   ]
+  },
+  {
+   "src": "oxygen",
+   "rel": "необходим",
+   "dst": "ксантогенат",
+   "desc": "Для закрепления ксантогената на золоте необходимо предварительное взаимодействие золота с кислородом, растворенным в воде.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p271_0"
+   ]
+  },
+  {
+   "src": "reagent_regime",
+   "rel": "affects",
+   "dst": "mech_surface",
+   "desc": "Ксантогенаты и аэрофлоты способствуют гидрофобизации поверхности медных сульфидов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p276_0"
+   ]
+  },
+  {
+   "src": "grinding",
+   "rel": "influences",
+   "dst": "mech_liberation",
+   "desc": "Измельчение способствует раскрытию сростков медных сульфидов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p276_0"
+   ]
+  },
+  {
+   "src": "mech_liberation",
+   "rel": "enhances",
+   "dst": "flotation_efficiency",
+   "desc": "Раскрытие сростков улучшает эффективность флотации медных сульфидов.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p276_0"
+   ]
+  },
+  {
+   "src": "pyrite",
+   "rel": "separates_from",
+   "dst": "copper_sulfides",
+   "desc": "Для разделения пирита от медных сульфидов применяют известь при pH около 12.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p276_0"
+   ]
+  },
+  {
+   "src": "ph_level",
+   "rel": "determines",
+   "dst": "reagent_choice",
+   "desc": "В зависимости от уровня pH выбирают ксантогенаты или аэрофлоты для флотации медных руд.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p276_0"
+   ]
+  },
+  {
+   "src": "grinding",
+   "rel": "causes",
+   "dst": "flotation_main",
+   "desc": "Проведение медной флотации при сравнительно крупном измельчении для части медных сульфидов и пирита.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p282_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "leads_to",
+   "dst": "regrinding",
+   "desc": "Хвосты медной флотации доизмельчают для доизвлечения меди.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p282_0"
+   ]
+  },
+  {
+   "src": "regrinding",
+   "rel": "enables",
+   "dst": "flotation_scav",
+   "desc": "Доизмельченные хвосты флотируют при pH 12 для доизвлечения меди.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p282_0"
+   ]
+  },
+  {
+   "src": "reagent_regime",
+   "rel": "influences",
+   "dst": "flotation_clean",
+   "desc": "Введение реагентов, снижающих щелочность хвостов до рН 7-9, для флотации пирита с повышенным расходом бутилового ксантогената.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p282_0"
+   ]
+  },
+  {
+   "src": "pH_adjustment",
+   "rel": "affects",
+   "dst": "mech_selectivity",
+   "desc": "Снижение pH пульпы до определенного предела создает благоприятные условия для флотации пирита.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p282_0"
+   ]
+  },
+  {
+   "src": "collective_flotation",
+   "rel": "avoids",
+   "dst": "alkalinity_reduction",
+   "desc": "Метод коллективной флотации с последующей селекцией коллективного концентрата свободен от необходимости операции снижения щелочности перед флотацией пирита.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p282_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "uses",
+   "dst": "cyanide",
+   "desc": "При прямой селективной флотации свинцово-цинковых руд цианид используется для подавления цинковой обманки.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p285_0"
+   ]
+  },
+  {
+   "src": "cyanide",
+   "rel": "affects",
+   "dst": "galena",
+   "desc": "Цианид оказывает подавляющее действие на галенит в меньшей степени по сравнению с цинковой обманкой, что позволяет флотировать свинец в первую очередь.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p285_0"
+   ]
+  },
+  {
+   "src": "cyanide",
+   "rel": "causes",
+   "dst": "gold_loss",
+   "desc": "Цианид приводит к потерям свободного золота, так как оно растворяется в процессе флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p285_0"
+   ]
+  },
+  {
+   "src": "copper_sulfate",
+   "rel": "activates",
+   "dst": "zinc_blende",
+   "desc": "После первоначального подавления цинковой обманки цианидом, медный купорос используется для активации подавленной цинковой обманки.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p285_0"
+   ]
+  },
+  {
+   "src": "limestone",
+   "rel": "suppresses",
+   "dst": "pyrite",
+   "desc": "Известь используется в щелочной среде для подавления пирита при флотации цинка.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p285_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "обеспечивает",
+   "dst": "kpi_recovery",
+   "desc": "При коллективной флотации можно достичь высокого извлечения полезных компонентов в одноименные концентраты.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p286_0"
+   ]
+  },
+  {
+   "src": "reagent_regime",
+   "rel": "влияет на",
+   "dst": "mech_kinetics",
+   "desc": "Большие расходы собирателя при основной флотации обеспечивают полный перевод всех полезных компонентов в пенный продукт.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p286_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "снижает",
+   "dst": "kpi_ni_loss",
+   "desc": "Основная флотация позволяет снизить потери никеля за счет перевода полезных компонентов в пенный продукт.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p286_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "снижает",
+   "dst": "kpi_cu_loss",
+   "desc": "Основная флотация позволяет снизить потери меди за счет перевода полезных компонентов в пенный продукт.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p286_0"
+   ]
+  },
+  {
+   "src": "classification",
+   "rel": "позволяет",
+   "dst": "reduce_energy_consumption",
+   "desc": "Применение операций обогащения руды в тяжелых суспензиях позволяет сократить количество флотационных камер и расход реагента, энергии.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p286_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "requires",
+   "dst": "reagent_regime",
+   "desc": "Для флотации медно-цинковых руд требуется введение реагентов, таких как известь, сода или едкий натр, для обеспечения оптимального pH.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p288_0"
+   ]
+  },
+  {
+   "src": "flotation_main",
+   "rel": "produces",
+   "dst": "collective_concentrate",
+   "desc": "На первой стадии флотации получают коллективный концентрат, содержащий все сульфиды.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p288_0"
+   ]
+  },
+  {
+   "src": "collective_concentrate",
+   "rel": "undergoes",
+   "dst": "flotation_clean",
+   "desc": "Коллективный концентрат подвергается дополнительной флотации для разделения на медный, цинковый и пиритный концентраты.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p288_0"
+   ]
+  },
+  {
+   "src": "pnt_open",
+   "rel": "affects",
+   "dst": "kpi_recovery",
+   "desc": "Эффективное раскрытие медных сульфидов влияет на сквозное извлечение металлов при флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p288_0"
+   ]
+  },
+  {
+   "src": "mech_liberation",
+   "rel": "influences",
+   "dst": "flotation_kinetics",
+   "desc": "Раскрытие сростков минералов влияет на кинетику флотации, определяя скорость и эффективность процесса.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p288_0"
+   ]
+  },
+  {
+   "src": "grinding",
+   "rel": "affects",
+   "dst": "mech_liberation",
+   "desc": "Измельчение руды способствует раскрытию сростков минералов, что важно для эффективной флотации.",
+   "sources": [
+    "geokniga-flotacionnye-metody-obogashchen_p288_0"
+   ]
+  }
+ ]
+}
